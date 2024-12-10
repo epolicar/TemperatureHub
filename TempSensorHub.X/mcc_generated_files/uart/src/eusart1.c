@@ -40,6 +40,9 @@
   Section: Macro Declarations
 */
 
+#define EUSART1_TX_BUFFER_SIZE (8U) //buffer size should be 2^n
+#define EUSART1_TX_BUFFER_MASK (EUSART1_TX_BUFFER_SIZE - 1U) 
+
 #define EUSART1_RX_BUFFER_SIZE (8U) //buffer size should be 2^n
 #define EUSART1_RX_BUFFER_MASK (EUSART1_RX_BUFFER_SIZE - 1U)
 
@@ -65,7 +68,7 @@ const uart_drv_interface_t UART1 = {
     .BaudRateGet = NULL,
     .AutoBaudEventEnableGet = NULL,
     .ErrorGet = &EUSART1_ErrorGet,
-    .TxCompleteCallbackRegister = NULL,
+    .TxCompleteCallbackRegister = &EUSART1_TxCompleteCallbackRegister,
     .RxCompleteCallbackRegister = &EUSART1_RxCompleteCallbackRegister,
     .TxCollisionCallbackRegister = NULL,
     .FramingErrorCallbackRegister = &EUSART1_FramingErrorCallbackRegister,
@@ -77,6 +80,11 @@ const uart_drv_interface_t UART1 = {
 /**
   Section: EUSART1 variables
 */
+static volatile uint8_t eusart1TxHead = 0;
+static volatile uint8_t eusart1TxTail = 0;
+static volatile uint8_t eusart1TxBuffer[EUSART1_TX_BUFFER_SIZE];
+static volatile uint8_t eusart1TxBufferRemaining;
+
 static volatile uint8_t eusart1RxHead = 0;
 static volatile uint8_t eusart1RxTail = 0;
 static volatile uint8_t eusart1RxBuffer[EUSART1_RX_BUFFER_SIZE];
@@ -99,6 +107,10 @@ static volatile eusart1_status_t eusart1RxLastError;
   Section: EUSART1 APIs
 */
 
+void (*EUSART1_TxInterruptHandler)(void);
+/* cppcheck-suppress misra-c2012-8.9 */
+static void (*EUSART1_TxCompleteInterruptHandler)(void) = NULL;
+
 void (*EUSART1_RxInterruptHandler)(void);
 static void (*EUSART1_RxCompleteInterruptHandler)(void) = NULL;
 
@@ -108,6 +120,7 @@ static void (*EUSART1_OverrunErrorHandler)(void) = NULL;
 static void EUSART1_DefaultFramingErrorCallback(void);
 static void EUSART1_DefaultOverrunErrorCallback(void);
 
+void EUSART1_TransmitISR (void);
 void EUSART1_ReceiveISR(void);
 
 
@@ -120,6 +133,9 @@ void EUSART1_Initialize(void)
     PIE3bits.RC1IE = 0;   
      EUSART1_RxInterruptHandler = EUSART1_ReceiveISR;   
 
+    PIE3bits.TX1IE = 0; 
+    EUSART1_TxInterruptHandler = EUSART1_TransmitISR; 
+
     // Set the EUSART1 module to the options selected in the user interface.
 
     //ABDEN disabled; WUE disabled; BRG16 16bit_generator; SCKP Non-Inverted; 
@@ -128,14 +144,18 @@ void EUSART1_Initialize(void)
     RC1STA = 0x90; 
     //TX9D 0x0; BRGH hi_speed; SENDB sync_break_complete; SYNC asynchronous; TXEN enabled; TX9 8-bit; CSRC client; 
     TX1STA = 0x26; 
-    //SPBRGL 112; 
-    SP1BRGL = 0x70; 
-    //SPBRGH 2; 
-    SP1BRGH = 0x2; 
+    //SPBRGL 56; 
+    SP1BRGL = 0x38; 
+    //SPBRGH 1; 
+    SP1BRGH = 0x1; 
 
     EUSART1_FramingErrorCallbackRegister(EUSART1_DefaultFramingErrorCallback);
     EUSART1_OverrunErrorCallbackRegister(EUSART1_DefaultOverrunErrorCallback);
     eusart1RxLastError.status = 0;  
+
+    eusart1TxHead = 0;
+    eusart1TxTail = 0;
+    eusart1TxBufferRemaining = sizeof(eusart1TxBuffer);
 
     eusart1RxHead = 0;
     eusart1RxTail = 0;
@@ -147,6 +167,7 @@ void EUSART1_Initialize(void)
 void EUSART1_Deinitialize(void)
 {
     PIE3bits.RC1IE = 0;    
+    PIE3bits.TX1IE = 0; 
     BAUD1CON = 0x00;
     RC1STA = 0x00;
     TX1STA = 0x00;
@@ -223,6 +244,17 @@ void EUSART1_AutoBaudDetectOverflowReset(void)
     BAUD1CONbits.ABDOVF = 0; 
 }
 
+void EUSART1_TransmitInterruptEnable(void)
+{
+    PIE3bits.TX1IE = 1;
+
+}
+
+void EUSART1_TransmitInterruptDisable(void)
+{ 
+    PIE3bits.TX1IE = 0; 
+}
+
 void EUSART1_ReceiveInterruptEnable(void)
 {
     PIE3bits.RC1IE = 1;
@@ -239,7 +271,7 @@ bool EUSART1_IsRxReady(void)
 
 bool EUSART1_IsTxReady(void)
 {
-    return (bool)(PIR3bits.TX1IF && TX1STAbits.TXEN);
+    return (eusart1TxBufferRemaining ? true : false);
 }
 
 bool EUSART1_IsTxDone(void)
@@ -320,7 +352,49 @@ void EUSART1_ReceiveISR(void)
 
 void EUSART1_Write(uint8_t txData)
 {
-    TX1REG = txData;
+    uint8_t tempTxHead;
+    
+    if(0 == PIE3bits.TX1IE)
+    {
+        TX1REG = txData;
+    }
+    else if(0U < eusart1TxBufferRemaining) // check if at least one byte place is available in TX buffer
+    {
+       eusart1TxBuffer[eusart1TxHead] = txData;
+       tempTxHead = (eusart1TxHead + 1U) & EUSART1_TX_BUFFER_MASK;
+       
+       eusart1TxHead = tempTxHead;
+       PIE3bits.TX1IE = 0; //Critical value decrement
+       eusart1TxBufferRemaining--; // one less byte remaining in TX buffer
+    }
+    else
+    {
+        //overflow condition; eusart1TxBufferRemaining is 0 means TX buffer is full
+    }
+    PIE3bits.TX1IE = 1;
+}
+
+void EUSART1_TransmitISR(void)
+{
+    uint8_t tempTxTail;
+    // use this default transmit interrupt handler code
+    if(sizeof(eusart1TxBuffer) > eusart1TxBufferRemaining) // check if all data is transmitted
+    {
+       TX1REG = eusart1TxBuffer[eusart1TxTail];
+       tempTxTail = (eusart1TxTail + 1U) & EUSART1_TX_BUFFER_MASK;
+       
+       eusart1TxTail = tempTxTail;
+       eusart1TxBufferRemaining++; // one byte sent, so 1 more byte place is available in TX buffer
+    }
+    else
+    {
+        PIE3bits.TX1IE = 0;
+    }
+
+    if(NULL != EUSART1_TxCompleteInterruptHandler)
+    {
+        (*EUSART1_TxCompleteInterruptHandler)();
+    }
 }
 
 static void EUSART1_DefaultFramingErrorCallback(void)
@@ -356,6 +430,14 @@ void EUSART1_RxCompleteCallbackRegister(void (* callbackHandler)(void))
     if(NULL != callbackHandler)
     {
        EUSART1_RxCompleteInterruptHandler = callbackHandler; 
+    }   
+}
+
+void EUSART1_TxCompleteCallbackRegister(void (* callbackHandler)(void))
+{
+    if(NULL != callbackHandler)
+    {
+       EUSART1_TxCompleteInterruptHandler = callbackHandler;
     }   
 }
 

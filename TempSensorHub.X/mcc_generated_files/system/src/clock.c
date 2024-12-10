@@ -40,8 +40,8 @@ void CLOCK_Initialize(void)
 {
     // Set the CLOCK CONTROL module to the options selected in the user interface.
     OSCCON1 = (0 << _OSCCON1_NDIV_POSN)   // NDIV 1
-        | (1 << _OSCCON1_NOSC_POSN);  // NOSC HFINTOSC with 2x PLL
-    OSCCON3 = (0 << _OSCCON3_SOSCPWR_POSN)   // SOSCPWR Low power
+        | (6 << _OSCCON1_NOSC_POSN);  // NOSC HFINTOSC
+    OSCCON3 = (1 << _OSCCON3_SOSCPWR_POSN)   // SOSCPWR High power
         | (0 << _OSCCON3_CSWHOLD_POSN);  // CSWHOLD may proceed
     OSCEN = (0 << _OSCEN_EXTOEN_POSN)   // EXTOEN disabled
         | (0 << _OSCEN_HFOEN_POSN)   // HFOEN disabled
@@ -52,10 +52,6 @@ void CLOCK_Initialize(void)
     OSCFRQ = (4 << _OSCFRQ_HFFRQ_POSN);  // HFFRQ 12_MHz
     OSCTUNE = (0 << _OSCTUNE_HFTUN_POSN);  // HFTUN 0x20
 
-    //Wait for PLL to stabilize
-    while( OSCSTATbits.PLLR == 0)
-    {
-    }
 }
 /**
  End of File
