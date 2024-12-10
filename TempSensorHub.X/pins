@@ -1,0 +1,7 @@
+Location,Pin Name,Module,Function,Direction,Custom Name,Analog,Start High,Weak Pullup,Open Drain,Slew Rate,Input Level Control,Interrupt on Change
+11,RB3,Pins,GPIO,output,CS,false,false,false,false,true,true,none
+31,RC1,Pins,GPIO,input,IO_RC1,false,false,false,false,true,true,none
+12,RB4,MSSP1,SDI1,input,SDI,false,false,false,false,true,true,none
+13,RB5,MSSP1,SCK1,in/out,SCK,false,false,false,false,true,true,none
+40,RC6,EUSART1,TX1,output,TX,false,false,false,false,true,true,none
+1,RC7,EUSART1,RX1,input,RX,false,false,false,false,true,true,none
