@@ -1,25 +1,60 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"56 mcc_generated_files/system/src/../../system/clock.h
-[; ;mcc_generated_files/system/src/../../system/clock.h: 56: void CLOCK_Initialize(void);
-[v _CLOCK_Initialize `(v ~T0 @X0 0 ef ]
-"229 mcc_generated_files/system/src/../../system/pins.h
-[; ;mcc_generated_files/system/src/../../system/pins.h: 229: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"162 mcc_generated_files/system/src/../../timer/tmr0.h
-[; ;mcc_generated_files/system/src/../../timer/tmr0.h: 162: void TMR0_Initialize(void);
-[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
-"117 mcc_generated_files/system/src/../../uart/eusart1.h
-[; ;mcc_generated_files/system/src/../../uart/eusart1.h: 117: void EUSART1_Initialize(void);
-[v _EUSART1_Initialize `(v ~T0 @X0 0 ef ]
-"124 mcc_generated_files/system/src/../../uart/eusart2.h
-[; ;mcc_generated_files/system/src/../../uart/eusart2.h: 124: void EUSART2_Initialize(void);
-[v _EUSART2_Initialize `(v ~T0 @X0 0 ef ]
-"126 mcc_generated_files/system/src/../../spi/mssp1.h
-[; ;mcc_generated_files/system/src/../../spi/mssp1.h: 126: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"85 mcc_generated_files/system/src/../../system/interrupt.h
-[; ;mcc_generated_files/system/src/../../system/interrupt.h: 85: void INTERRUPT_Initialize (void);
-[v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
+[v F7760 `(v ~T0 @X0 0 tf ]
+"8095 C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8095: extern volatile unsigned char TMR0H __attribute__((address(0x59D)));
+[v _TMR0H `Vuc ~T0 @X0 0 e@1437 ]
+"7957
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 7957: extern volatile unsigned char TMR0L __attribute__((address(0x59C)));
+[v _TMR0L `Vuc ~T0 @X0 0 e@1436 ]
+"8419
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8419: extern volatile unsigned char T0CON1 __attribute__((address(0x59F)));
+[v _T0CON1 `Vuc ~T0 @X0 0 e@1439 ]
+"39 mcc_generated_files/timer/src/tmr0.c
+[; ;mcc_generated_files/timer/src/tmr0.c: 39: static void TMR0_DefaultCallback(void);
+[v _TMR0_DefaultCallback `(v ~T0 @X0 0 sf ]
+"9273 C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 9273:     struct {
+[s S429 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S429 . INTF . IOCIF TMR0IF ]
+"9272
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 9272: typedef union {
+[u S428 `S429 1 ]
+[n S428 . . ]
+"9280
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 9280: extern volatile PIR0bits_t PIR0bits __attribute__((address(0x70C)));
+[v _PIR0bits `VS428 ~T0 @X0 0 e@1804 ]
+"9579
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 9579:     struct {
+[s S446 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S446 . INTE . IOCIE TMR0IE ]
+"9578
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 9578: typedef union {
+[u S445 `S446 1 ]
+[n S445 . . ]
+"9586
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 9586: extern volatile PIE0bits_t PIE0bits __attribute__((address(0x716)));
+[v _PIE0bits `VS445 ~T0 @X0 0 e@1814 ]
+"8349
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8349: extern volatile unsigned char T0CON0 __attribute__((address(0x59E)));
+[v _T0CON0 `Vuc ~T0 @X0 0 e@1438 ]
+"8355
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8355:     struct {
+[s S387 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S387 . T0OUTPS T016BIT T0OUT T0OE T0EN ]
+"8362
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8362:     struct {
+[s S388 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S388 . T0OUTPS0 T0OUTPS1 T0OUTPS2 T0OUTPS3 ]
+"8354
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8354: typedef union {
+[u S386 `S387 1 `S388 1 ]
+[n S386 . . . ]
+"8369
+[; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 8369: extern volatile T0CON0bits_t T0CON0bits __attribute__((address(0x59E)));
+[v _T0CON0bits `VS386 ~T0 @X0 0 e@1438 ]
+[v F7779 `(v ~T0 @X0 0 tf ]
+[v F7781 `(v ~T0 @X0 0 tf ]
+[v F7783 `(v ~T0 @X0 0 tf ]
 "110 C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h
 [; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1127,36 +1162,286 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22545
 [; ;C:/Users/edgar/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 22545: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"39 mcc_generated_files/system/src/system.c
-[; ;mcc_generated_files/system/src/system.c: 39: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"40
-[; ;mcc_generated_files/system/src/system.c: 40: {
-{
-[e :U _SYSTEM_Initialize ]
-[f ]
-"41
-[; ;mcc_generated_files/system/src/system.c: 41:     CLOCK_Initialize();
-[e ( _CLOCK_Initialize ..  ]
-"42
-[; ;mcc_generated_files/system/src/system.c: 42:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"43
-[; ;mcc_generated_files/system/src/system.c: 43:     TMR0_Initialize();
-[e ( _TMR0_Initialize ..  ]
-"44
-[; ;mcc_generated_files/system/src/system.c: 44:     EUSART1_Initialize();
-[e ( _EUSART1_Initialize ..  ]
+"38 mcc_generated_files/timer/src/tmr0.c
+[; ;mcc_generated_files/timer/src/tmr0.c: 38: static void (*TMR0_PeriodMatchCallback)(void);
+[v _TMR0_PeriodMatchCallback `*F7760 ~T0 @X0 1 s ]
 "45
-[; ;mcc_generated_files/system/src/system.c: 45:     EUSART2_Initialize();
-[e ( _EUSART2_Initialize ..  ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 45: void TMR0_Initialize(void)
+[v _TMR0_Initialize `(v ~T0 @X0 1 ef ]
 "46
-[; ;mcc_generated_files/system/src/system.c: 46:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 46: {
+{
+[e :U _TMR0_Initialize ]
+[f ]
 "47
-[; ;mcc_generated_files/system/src/system.c: 47:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
+[; ;mcc_generated_files/timer/src/tmr0.c: 47:     TMR0H = 0x5C;
+[e = _TMR0H -> -> 92 `i `uc ]
 "48
-[; ;mcc_generated_files/system/src/system.c: 48: }
+[; ;mcc_generated_files/timer/src/tmr0.c: 48:     TMR0L = 0x0;
+[e = _TMR0L -> -> 0 `i `uc ]
+"50
+[; ;mcc_generated_files/timer/src/tmr0.c: 50:     T0CON1 = (3 << 0x5)
+[e = _T0CON1 -> | | << -> 3 `i -> 5 `i << -> 4 `i -> 0 `i << -> 1 `i -> 4 `i `uc ]
+"54
+[; ;mcc_generated_files/timer/src/tmr0.c: 54:     TMR0_PeriodMatchCallback = TMR0_DefaultCallback;
+[e = _TMR0_PeriodMatchCallback &U _TMR0_DefaultCallback ]
+"56
+[; ;mcc_generated_files/timer/src/tmr0.c: 56:     PIR0bits.TMR0IF = 0;
+[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
+"57
+[; ;mcc_generated_files/timer/src/tmr0.c: 57:     PIE0bits.TMR0IE = 1;
+[e = . . _PIE0bits 0 3 -> -> 1 `i `uc ]
+"59
+[; ;mcc_generated_files/timer/src/tmr0.c: 59:     T0CON0 = (7 << 0x0)
+[e = _T0CON0 -> | | << -> 7 `i -> 0 `i << -> 1 `i -> 7 `i << -> 0 `i -> 4 `i `uc ]
+"62
+[; ;mcc_generated_files/timer/src/tmr0.c: 62: }
+[e :UE 1022 ]
+}
+"64
+[; ;mcc_generated_files/timer/src/tmr0.c: 64: void TMR0_Deinitialize(void)
+[v _TMR0_Deinitialize `(v ~T0 @X0 1 ef ]
+"65
+[; ;mcc_generated_files/timer/src/tmr0.c: 65: {
+{
+[e :U _TMR0_Deinitialize ]
+[f ]
+"66
+[; ;mcc_generated_files/timer/src/tmr0.c: 66:     T0CON0bits.T0EN = 0;
+[e = . . _T0CON0bits 0 4 -> -> 0 `i `uc ]
+"68
+[; ;mcc_generated_files/timer/src/tmr0.c: 68:     PIR0bits.TMR0IF = 0;
+[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
+"69
+[; ;mcc_generated_files/timer/src/tmr0.c: 69:     PIE0bits.TMR0IE = 0;
+[e = . . _PIE0bits 0 3 -> -> 0 `i `uc ]
+"71
+[; ;mcc_generated_files/timer/src/tmr0.c: 71:     T0CON0 = 0x0;
+[e = _T0CON0 -> -> 0 `i `uc ]
+"72
+[; ;mcc_generated_files/timer/src/tmr0.c: 72:     T0CON1 = 0x0;
+[e = _T0CON1 -> -> 0 `i `uc ]
+"73
+[; ;mcc_generated_files/timer/src/tmr0.c: 73:     TMR0H = 0xFF;
+[e = _TMR0H -> -> 255 `i `uc ]
+"74
+[; ;mcc_generated_files/timer/src/tmr0.c: 74:     TMR0L =0x0;
+[e = _TMR0L -> -> 0 `i `uc ]
+"75
+[; ;mcc_generated_files/timer/src/tmr0.c: 75: }
+[e :UE 1023 ]
+}
+"77
+[; ;mcc_generated_files/timer/src/tmr0.c: 77: void TMR0_Start(void)
+[v _TMR0_Start `(v ~T0 @X0 1 ef ]
+"78
+[; ;mcc_generated_files/timer/src/tmr0.c: 78: {
+{
+[e :U _TMR0_Start ]
+[f ]
+"79
+[; ;mcc_generated_files/timer/src/tmr0.c: 79:     T0CON0bits.T0EN = 1;
+[e = . . _T0CON0bits 0 4 -> -> 1 `i `uc ]
+"80
+[; ;mcc_generated_files/timer/src/tmr0.c: 80: }
+[e :UE 1024 ]
+}
+"82
+[; ;mcc_generated_files/timer/src/tmr0.c: 82: void TMR0_Stop(void)
+[v _TMR0_Stop `(v ~T0 @X0 1 ef ]
+"83
+[; ;mcc_generated_files/timer/src/tmr0.c: 83: {
+{
+[e :U _TMR0_Stop ]
+[f ]
+"84
+[; ;mcc_generated_files/timer/src/tmr0.c: 84:     T0CON0bits.T0EN = 0;
+[e = . . _T0CON0bits 0 4 -> -> 0 `i `uc ]
+"85
+[; ;mcc_generated_files/timer/src/tmr0.c: 85: }
+[e :UE 1025 ]
+}
+"87
+[; ;mcc_generated_files/timer/src/tmr0.c: 87: uint8_t TMR0_CounterGet(void)
+[v _TMR0_CounterGet `(uc ~T0 @X0 1 ef ]
+"88
+[; ;mcc_generated_files/timer/src/tmr0.c: 88: {
+{
+[e :U _TMR0_CounterGet ]
+[f ]
+"89
+[; ;mcc_generated_files/timer/src/tmr0.c: 89:     uint8_t counterValue;
+[v _counterValue `uc ~T0 @X0 1 a ]
+"91
+[; ;mcc_generated_files/timer/src/tmr0.c: 91:     counterValue = TMR0L;
+[e = _counterValue _TMR0L ]
+"93
+[; ;mcc_generated_files/timer/src/tmr0.c: 93:     return counterValue;
+[e ) _counterValue ]
+[e $UE 1026  ]
+"94
+[; ;mcc_generated_files/timer/src/tmr0.c: 94: }
+[e :UE 1026 ]
+}
+"96
+[; ;mcc_generated_files/timer/src/tmr0.c: 96: void TMR0_CounterSet(uint8_t counterValue)
+[v _TMR0_CounterSet `(v ~T0 @X0 1 ef1`uc ]
+"97
+[; ;mcc_generated_files/timer/src/tmr0.c: 97: {
+{
+[e :U _TMR0_CounterSet ]
+"96
+[; ;mcc_generated_files/timer/src/tmr0.c: 96: void TMR0_CounterSet(uint8_t counterValue)
+[v _counterValue `uc ~T0 @X0 1 r1 ]
+"97
+[; ;mcc_generated_files/timer/src/tmr0.c: 97: {
+[f ]
+"98
+[; ;mcc_generated_files/timer/src/tmr0.c: 98:     TMR0L = counterValue;
+[e = _TMR0L _counterValue ]
+"99
+[; ;mcc_generated_files/timer/src/tmr0.c: 99:  }
+[e :UE 1027 ]
+}
+"101
+[; ;mcc_generated_files/timer/src/tmr0.c: 101: void TMR0_PeriodSet(uint8_t periodValue)
+[v _TMR0_PeriodSet `(v ~T0 @X0 1 ef1`uc ]
+"102
+[; ;mcc_generated_files/timer/src/tmr0.c: 102: {
+{
+[e :U _TMR0_PeriodSet ]
+"101
+[; ;mcc_generated_files/timer/src/tmr0.c: 101: void TMR0_PeriodSet(uint8_t periodValue)
+[v _periodValue `uc ~T0 @X0 1 r1 ]
+"102
+[; ;mcc_generated_files/timer/src/tmr0.c: 102: {
+[f ]
+"103
+[; ;mcc_generated_files/timer/src/tmr0.c: 103:    TMR0H = periodValue;
+[e = _TMR0H _periodValue ]
+"104
+[; ;mcc_generated_files/timer/src/tmr0.c: 104: }
+[e :UE 1028 ]
+}
+"106
+[; ;mcc_generated_files/timer/src/tmr0.c: 106: uint8_t TMR0_PeriodGet(void)
+[v _TMR0_PeriodGet `(uc ~T0 @X0 1 ef ]
+"107
+[; ;mcc_generated_files/timer/src/tmr0.c: 107: {
+{
+[e :U _TMR0_PeriodGet ]
+[f ]
+"108
+[; ;mcc_generated_files/timer/src/tmr0.c: 108:     return TMR0H;
+[e ) _TMR0H ]
+[e $UE 1029  ]
+"109
+[; ;mcc_generated_files/timer/src/tmr0.c: 109: }
+[e :UE 1029 ]
+}
+"111
+[; ;mcc_generated_files/timer/src/tmr0.c: 111: uint8_t TMR0_MaxCountGet(void)
+[v _TMR0_MaxCountGet `(uc ~T0 @X0 1 ef ]
+"112
+[; ;mcc_generated_files/timer/src/tmr0.c: 112: {
+{
+[e :U _TMR0_MaxCountGet ]
+[f ]
+"113
+[; ;mcc_generated_files/timer/src/tmr0.c: 113:     return (255U);
+[e ) -> -> 255 `ui `uc ]
+[e $UE 1030  ]
+"114
+[; ;mcc_generated_files/timer/src/tmr0.c: 114: }
 [e :UE 1030 ]
+}
+"116
+[; ;mcc_generated_files/timer/src/tmr0.c: 116: void TMR0_TMRInterruptEnable(void)
+[v _TMR0_TMRInterruptEnable `(v ~T0 @X0 1 ef ]
+"117
+[; ;mcc_generated_files/timer/src/tmr0.c: 117: {
+{
+[e :U _TMR0_TMRInterruptEnable ]
+[f ]
+"118
+[; ;mcc_generated_files/timer/src/tmr0.c: 118:     PIE0bits.TMR0IE = 1;
+[e = . . _PIE0bits 0 3 -> -> 1 `i `uc ]
+"119
+[; ;mcc_generated_files/timer/src/tmr0.c: 119: }
+[e :UE 1031 ]
+}
+"121
+[; ;mcc_generated_files/timer/src/tmr0.c: 121: void TMR0_TMRInterruptDisable(void)
+[v _TMR0_TMRInterruptDisable `(v ~T0 @X0 1 ef ]
+"122
+[; ;mcc_generated_files/timer/src/tmr0.c: 122: {
+{
+[e :U _TMR0_TMRInterruptDisable ]
+[f ]
+"123
+[; ;mcc_generated_files/timer/src/tmr0.c: 123:     PIE0bits.TMR0IE = 0;
+[e = . . _PIE0bits 0 3 -> -> 0 `i `uc ]
+"124
+[; ;mcc_generated_files/timer/src/tmr0.c: 124: }
+[e :UE 1032 ]
+}
+"126
+[; ;mcc_generated_files/timer/src/tmr0.c: 126: void TMR0_ISR(void)
+[v _TMR0_ISR `(v ~T0 @X0 1 ef ]
+"127
+[; ;mcc_generated_files/timer/src/tmr0.c: 127: {
+{
+[e :U _TMR0_ISR ]
+[f ]
+"128
+[; ;mcc_generated_files/timer/src/tmr0.c: 128:     if(((void*)0) != TMR0_PeriodMatchCallback)
+[e $ ! != -> -> -> 0 `i `*v `*F7779 _TMR0_PeriodMatchCallback 1034  ]
+"129
+[; ;mcc_generated_files/timer/src/tmr0.c: 129:     {
+{
+"130
+[; ;mcc_generated_files/timer/src/tmr0.c: 130:         TMR0_PeriodMatchCallback();
+[e ( *U _TMR0_PeriodMatchCallback ..  ]
+"131
+[; ;mcc_generated_files/timer/src/tmr0.c: 131:     }
+}
+[e :U 1034 ]
+"132
+[; ;mcc_generated_files/timer/src/tmr0.c: 132:     PIR0bits.TMR0IF = 0;
+[e = . . _PIR0bits 0 3 -> -> 0 `i `uc ]
+"133
+[; ;mcc_generated_files/timer/src/tmr0.c: 133: }
+[e :UE 1033 ]
+}
+"135
+[; ;mcc_generated_files/timer/src/tmr0.c: 135: void TMR0_PeriodMatchCallbackRegister(void (* callbackHandler)(void))
+[v _TMR0_PeriodMatchCallbackRegister `(v ~T0 @X0 1 ef1`*F7781 ]
+"136
+[; ;mcc_generated_files/timer/src/tmr0.c: 136: {
+{
+[e :U _TMR0_PeriodMatchCallbackRegister ]
+"135
+[; ;mcc_generated_files/timer/src/tmr0.c: 135: void TMR0_PeriodMatchCallbackRegister(void (* callbackHandler)(void))
+[v _callbackHandler `*F7783 ~T0 @X0 1 r1 ]
+"136
+[; ;mcc_generated_files/timer/src/tmr0.c: 136: {
+[f ]
+"137
+[; ;mcc_generated_files/timer/src/tmr0.c: 137:     TMR0_PeriodMatchCallback = callbackHandler;
+[e = _TMR0_PeriodMatchCallback _callbackHandler ]
+"138
+[; ;mcc_generated_files/timer/src/tmr0.c: 138: }
+[e :UE 1035 ]
+}
+"140
+[; ;mcc_generated_files/timer/src/tmr0.c: 140: static void TMR0_DefaultCallback(void)
+[v _TMR0_DefaultCallback `(v ~T0 @X0 1 sf ]
+"141
+[; ;mcc_generated_files/timer/src/tmr0.c: 141: {
+{
+[e :U _TMR0_DefaultCallback ]
+[f ]
+"143
+[; ;mcc_generated_files/timer/src/tmr0.c: 143: }
+[e :UE 1036 ]
 }

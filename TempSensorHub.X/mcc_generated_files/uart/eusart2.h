@@ -36,6 +36,13 @@
 
 #include <stdbool.h>
 #include <stdint.h>
+/**
+    @ingroup eusart2 
+    @def Standard Input Output functions
+    @misradeviation{@required, 21.6} This inclusion is essential for UART module to use Printf function for print the character.
+*/
+/* cppcheck-suppress misra-c2012-21.6 */
+#include <stdio.h>
 #include "../system/system.h"
 #include "uart_drv_interface.h"
 
@@ -293,6 +300,22 @@ void EUSART2_FramingErrorCallbackRegister(void (* callbackHandler)(void));
  * @return None.
  */
 void EUSART2_OverrunErrorCallbackRegister(void (* callbackHandler)(void));
+
+/**
+ * @ingroup eusart2
+ * @brief This function used to printf support for reads the 8 bits from the FIFO register receiver.
+ * @param None.
+ * @return 8-bit data from RX FIFO register.
+ */
+int getch(void);
+
+/**
+ * @ingroup eusart2
+ * @brief This function used to printf support for writes a byte of data to the transmitter FIFO register.
+ * @param txData  - Data byte to write to the TX FIFO.
+ * @return None.
+ */
+void putch(char txData);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 

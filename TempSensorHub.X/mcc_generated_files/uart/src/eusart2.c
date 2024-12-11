@@ -242,6 +242,24 @@ void EUSART2_Write(uint8_t txData)
     TX2REG = txData;
 }
 
+int getch(void)
+{
+    while(!(EUSART2_IsRxReady()))
+    {
+
+    }
+    return EUSART2_Read();
+}
+
+void putch(char txData)
+{
+    while(!(EUSART2_IsTxReady()))
+    {
+
+    }
+    return EUSART2_Write(txData);   
+}
+
 static void EUSART2_DefaultFramingErrorCallback(void)
 {
     

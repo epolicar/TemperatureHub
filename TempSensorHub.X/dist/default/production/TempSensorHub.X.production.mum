@@ -1,7 +1,7 @@
 
 16F15376 Memory Summary:
-    Program space        used   8DBh (  2267) of  4000h words   ( 13.8%)
-    Data space           used    ACh (   172) of   800h bytes   (  8.4%)
+    Program space        used   898h (  2200) of  4000h words   ( 13.4%)
+    Data space           used    BCh (   188) of   800h bytes   (  9.2%)
     EEPROM space         None available
     Configuration bits   used     5h (     5) of     5h words   (100.0%)
     ID Location space    used     0h (     0) of     4h bytes   (  0.0%)

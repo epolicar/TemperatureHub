@@ -11,4 +11,6 @@ mcc_generated_files/system/src/../../system/../uart/uart_drv_interface.h  \
 mcc_generated_files/system/src/../../system/../uart/uart_types.h  \
 mcc_generated_files/system/src/../../system/../uart/eusart2.h  \
 mcc_generated_files/system/src/../../system/../spi/mssp1.h  \
-mcc_generated_files/system/src/../../system/../spi/spi_interface.h 
+mcc_generated_files/system/src/../../system/../spi/spi_interface.h  \
+mcc_generated_files/system/src/../../system/../timer/tmr0.h  \
+mcc_generated_files/system/src/../../system/../timer/tmr0_deprecated.h 
