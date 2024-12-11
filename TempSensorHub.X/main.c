@@ -327,7 +327,8 @@ void main(void) {
                   //SSP1CON3 = 0x10 -> bit4 (BOEN) SSPxBUF updates every time that a 
                   //                               new data byte is shifted in ignoring the BF bit 
                   //SSP1ADD  = 0x0f -> 125kHz
-
+    TMR0_Start;
+    
     if (STRAP_PIN) {
 //   if (false) {    
         /****** Master mode:*******/ 
