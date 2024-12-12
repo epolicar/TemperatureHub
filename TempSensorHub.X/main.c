@@ -288,30 +288,12 @@ void main(void) {
             printf("Temperature: %u\n\r", temperature);  // Debugging output
             __delay_ms(TIME_TO_READ);  // Delay in milliseconds, default = 100 mS
 #endif
-            __delay_ms(50);  // Delay 1 second
+            __delay_ms(10);  // Delay 1 second
         }
     } else {
         /****** Master mode:*******/
-        //Slave configuration
-        PB_SetDigitalMode(); 
-        SDO_SetDigitalMode();
-        SCK_SetDigitalMode();
-        TX1_SetDigitalMode();
-        RX1_SetDigitalMode();
-        TX2_SetDigitalMode();
-        RX2_SetDigitalMode();
-        SS_SetDigitalMode();
-
-        PB_SetDigitalInput(); //Personality: RA0
-        SDO_SetDigitalOutput(); //SPI SDO: RB4
-        SCK_SetDigitalInput(); // SPI CLK in: RB5
-        TX1_SetDigitalOutput(); // TX: RC6
-        RX1_SetDigitalInput(); // RX: RC7
-        TX2_SetDigitalOutput(); // Debug TX:RD0
-        RX2_SetDigitalInput(); // Debug RX:RD1
-        SS_SetDigitalInput(); // SPI CS in: RD5
-        
-        SPI1_OpenSlave();
+        //SPI1_OpenSlave();
+        SPI1_Open(0);
         
         UART2_SendString("Mode: slave\n\r");
         // Slave mode
@@ -329,7 +311,6 @@ void main(void) {
         INTERRUPT_GlobalInterruptEnable();
         INTERRUPT_PeripheralInterruptEnable();        
         
-        
         UART2_SendString("entering loop\n\r");
         uint16_t data_temp;
         uint16_t data_spi = 0x1234;
@@ -339,7 +320,6 @@ void main(void) {
                 data_spi = data_temp;
                 printf("%x\r\n", data_spi);
             } 
-            //data_spi = 0x0F80;
 
 			SSP1BUF = data_spi >> 8; //send the high-byte
             data_ptr = 1;
