@@ -171,12 +171,33 @@ void uart1_handler(void)
         high_byte_serial = EUSART1_Read();
     }else {
         low_byte_serial = EUSART1_Read();
-        uint16_t data = (high_byte_serial << 8) | low_byte_serial;
+        uint16_t data = ((uint16_t)high_byte_serial << 8) | (uint16_t)low_byte_serial;
         buffer_write(&dataBuffer, data);
         //printf("%x\r\n", data);
     }
     tick_counter = 0; //reset the counter
 }
+
+void SPI1_OpenMaster(void) {
+    SSP1CON1bits.SSPEN = false; //reset SPI
+    //Reconfigure to host
+    SSP1STAT = 0x64;
+    SSP1CON1 = 0x00;
+    SSP1CON3 = 0x10;
+    SSP1ADD  = 0x01;
+	SSP1CON1bits.SSPEN = true; //enable SPI
+};
+
+void SPI1_OpenSlave(void) {
+    //Reconfigure to slave
+    SSP1CON1bits.SSPEN = false; //reset SPI    
+    SSP1STAT = 0x64;
+    SSP1CON1 = 0x04;
+    SSP1CON3 = 0x10;
+    SSP1ADD  = 0x00;    
+	SSP1CON1bits.SSPEN = true; //enable SPI
+	SPI1_Open(0);
+};
 
 void main(void) {
     /*
@@ -217,44 +238,37 @@ void main(void) {
     EUSART2_TransmitEnable();
 
     //All this already configured in pins.c, but configuring again
-    PB_SetDigitalMode(); 
-    SDO_SetDigitalMode();
-    SCK_SetDigitalMode();
-    TX1_SetDigitalMode();
-    RX1_SetDigitalMode();
-    TX2_SetDigitalMode();
-    RX2_SetDigitalMode();
-    SS_SetDigitalMode();
-    
-    PB_SetDigitalOutput(); //Personality: RA0
-    SDO_SetDigitalOutput(); //SPI SDO/I: RB4
-    SCK_SetDigitalInput(); // SPI CLK: RB5
-    TX1_SetDigitalOutput(); // TX: RC6
-    RX1_SetDigitalInput(); // RX: RC7
-    TX2_SetDigitalOutput(); // Debug TX:RD0
-    RX2_SetDigitalInput(); // Debug RX:RD1
-    SS_SetDigitalInput(); // SPI CS: RD5
-    
+    //Slave configuration
 
     INTERRUPT_GlobalInterruptEnable();
     INTERRUPT_PeripheralInterruptEnable();
     TMR0_PeriodMatchCallbackRegister(ticker);
-    SPI1_Open(0); //SSP1STAT = 0x00 -> bit7 (SMP) Input data sampled at middle of data output time
-                  //                -> bit6 (CKE) Transmit occurs on transition from Idle to active clock state
-                  //SSP1CON1 = 0x02 -> bit[7:6] (WCOL:SSPOV) no collision, no overflow 
-                  //                -> bit5 (SSPEN) Enables serial port and configures 
-                  //                ->              SCK, SDO, SDI and SS as the source of the serial port pins
-                  //                -> bit4 (CKP) Idle state for clock is a low level
-                  //                -> bit[3:0] (SSPM) SPI Host mode, clock = FOSC/64
-                  //SSP1CON3 = 0x10 -> bit4 (BOEN) SSPxBUF updates every time that a 
-                  //                               new data byte is shifted in ignoring the BF bit 
-                  //SSP1ADD  = 0x0f -> 125kHz
+
     TMR0_Start();
     
     if (STRAP_PIN) {
-//   if (false) {    
+   
         /****** Master mode:*******/ 
-        /****SS out put at RB3*****/
+        PB_SetDigitalMode(); 
+        SDO_SetDigitalMode();
+        SCK_SetDigitalMode();
+        TX1_SetDigitalMode();
+        RX1_SetDigitalMode();
+        TX2_SetDigitalMode();
+        RX2_SetDigitalMode();
+        SS_SetDigitalMode();
+
+        PB_SetDigitalInput(); //Personality: RA0
+        SDO_SetDigitalInput(); //SPI SDI: RB4
+        SCK_SetDigitalOutput(); // SPI CLK out: RB5
+        TX1_SetDigitalOutput(); // TX: RC6
+        RX1_SetDigitalInput(); // RX: RC7
+        TX2_SetDigitalOutput(); // Debug TX:RD0
+        RX2_SetDigitalInput(); // Debug RX:RD1
+        SS_SetDigitalOutput(); // SPI CS out: RD5
+        
+        SPI1_OpenMaster();
+        
         test1(1);
         UART2_SendString("Mode: master\n\r");
         uint16_t temperature;
@@ -273,6 +287,27 @@ void main(void) {
             __delay_ms(50);  // Delay 1 second
         }
     } else {
+            //Slave configuration
+        PB_SetDigitalMode(); 
+        SDO_SetDigitalMode();
+        SCK_SetDigitalMode();
+        TX1_SetDigitalMode();
+        RX1_SetDigitalMode();
+        TX2_SetDigitalMode();
+        RX2_SetDigitalMode();
+        SS_SetDigitalMode();
+
+        PB_SetDigitalInput(); //Personality: RA0
+        SDO_SetDigitalOutput(); //SPI SDO: RB4
+        SCK_SetDigitalInput(); // SPI CLK in: RB5
+        TX1_SetDigitalOutput(); // TX: RC6
+        RX1_SetDigitalInput(); // RX: RC7
+        TX2_SetDigitalOutput(); // Debug TX:RD0
+        RX2_SetDigitalInput(); // Debug RX:RD1
+        SS_SetDigitalInput(); // SPI CS in: RD5
+        
+        SPI1_OpenSlave();
+        
         UART2_SendString("Mode: slave\n\r");
         // Slave mode
         //CS_TRIS = 1; //RB3 is input
