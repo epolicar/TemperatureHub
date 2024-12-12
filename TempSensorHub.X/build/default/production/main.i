@@ -13932,10 +13932,10 @@ struct SPI_INTERFACE
 
 
 
-extern const struct SPI_INTERFACE SPI1_Host;
+extern const struct SPI_INTERFACE SPI1_Client;
 # 115 "./mcc_generated_files/system/../spi/mssp1.h"
 typedef enum {
-    HOST_CONFIG,
+    CLIENT_CONFIG,
     MSSP1_DEFAULT
 } spi1_configuration_name_t;
 
@@ -14319,10 +14319,18 @@ void main(void) {
     TMR0_PeriodMatchCallbackRegister(ticker);
 
     TMR0_Start();
+        if (PORTAbits.RA0){
 
-    if (PORTAbits.RA0){
 
-
+        TRISB = 0xD7;
+        SSP1DATPPS = 0xC;
+        RX1DTPPS = 0x17;
+        RX2DTPPS = 0x19;
+        RB3PPS = 0x16;
+        RC6PPS = 0x0F;
+        RD0PPS = 0x11;
+        SSP1CLKPPS = 0xD;
+        RB5PPS = 0x15;
 
 
         TRISDbits.TRISD5 = 0;

@@ -13932,10 +13932,10 @@ struct SPI_INTERFACE
 
 
 
-extern const struct SPI_INTERFACE SPI1_Host;
+extern const struct SPI_INTERFACE SPI1_Client;
 # 115 "mcc_generated_files/system/src/../../spi/mssp1.h"
 typedef enum {
-    HOST_CONFIG,
+    CLIENT_CONFIG,
     MSSP1_DEFAULT
 } spi1_configuration_name_t;
 

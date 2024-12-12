@@ -245,10 +245,19 @@ void main(void) {
     TMR0_PeriodMatchCallbackRegister(ticker);
 
     TMR0_Start();
-        if (STRAP_PIN)
+        if (STRAP_PIN){
         /****** Master mode:*******/ 
         //Master configuration /*
-       
+        TRISB = 0xD7;
+        SSP1DATPPS = 0xC; //RB4->MSSP1:SDI1;
+        RX1DTPPS = 0x17; //RC7->EUSART1:RX1;
+        RX2DTPPS = 0x19; //RD1->EUSART2:RX2;
+        RB3PPS = 0x16;  //RB3->MSSP1:SDO1;
+        RC6PPS = 0x0F;  //RC6->EUSART1:TX1;
+        RD0PPS = 0x11;  //RD0->EUSART2:TX2;
+        SSP1CLKPPS = 0xD;  //RB5->MSSP1:SCK1;
+        RB5PPS = 0x15;  //RB5->MSSP1:SCK1;
+
        //set cs as  output
         TRISDbits.TRISD5 = 0;  // Set D5 as output
         LATD5 = 1; //set it to high, cs is not not eable by default

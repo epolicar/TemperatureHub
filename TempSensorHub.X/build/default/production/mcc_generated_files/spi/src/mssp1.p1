@@ -1227,9 +1227,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 22545: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
 "38 mcc_generated_files/spi/src/mssp1.c
-[; ;mcc_generated_files/spi/src/mssp1.c: 38: const struct SPI_INTERFACE SPI1_Host = {
-[v _SPI1_Host `CS1022 ~T0 @X0 1 e ]
-[i _SPI1_Host
+[; ;mcc_generated_files/spi/src/mssp1.c: 38: const struct SPI_INTERFACE SPI1_Client = {
+[v _SPI1_Client `CS1022 ~T0 @X0 1 e ]
+[i _SPI1_Client
 :U ..
 :U ..
 &U _SPI1_Initialize
@@ -1256,15 +1256,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 :U ..
 :U ..
 -> -> 0 `i `uc
--> -> 10 `i `uc
+-> -> 4 `i `uc
 -> -> 16 `i `uc
--> -> 23 `i `uc
+-> -> 1 `i `uc
 ..
 :U ..
 -> -> 100 `i `uc
--> -> 0 `i `uc
+-> -> 4 `i `uc
 -> -> 16 `i `uc
--> -> 1 `i `uc
+-> -> 0 `i `uc
 ..
 ..
 ]

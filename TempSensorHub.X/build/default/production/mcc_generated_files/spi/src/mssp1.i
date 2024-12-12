@@ -13340,10 +13340,10 @@ struct SPI_INTERFACE
 
 
 
-extern const struct SPI_INTERFACE SPI1_Host;
+extern const struct SPI_INTERFACE SPI1_Client;
 # 115 "mcc_generated_files/spi/src/../mssp1.h"
 typedef enum {
-    HOST_CONFIG,
+    CLIENT_CONFIG,
     MSSP1_DEFAULT
 } spi1_configuration_name_t;
 
@@ -13414,7 +13414,7 @@ typedef struct {
 # 36 "mcc_generated_files/spi/src/mssp1.c" 2
 
 
-const struct SPI_INTERFACE SPI1_Host = {
+const struct SPI_INTERFACE SPI1_Client = {
     .Initialize = SPI1_Initialize,
     .Deinitialize = SPI1_Deinitialize,
     .Open = SPI1_Open,
@@ -13432,8 +13432,8 @@ const struct SPI_INTERFACE SPI1_Host = {
 };
 
 static const spi_configuration_t spi1_configuration[] = {
-    { 0x0, 0xa, 0x10, 0x17 },
-    { 0x64, 0x0, 0x10, 0x1 }
+    { 0x0, 0x4, 0x10, 0x01 },
+    { 0x64, 0x4, 0x10, 0x0 }
 };
 
 void SPI1_Initialize(void)
