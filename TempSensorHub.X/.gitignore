@@ -1,0 +1,28 @@
+# Ignore build output directories
+build/
+dist/
+
+# Ignore private Makefiles
+nbproject/private/
+nbproject/Makefile-*
+
+# Ignore configuration files
+nbproject/Package-*
+nbproject/configurations.xml
+
+# Ignore generated files
+*.o
+*.obj
+*.d
+*.lst
+*.sym
+*.sdb
+*.obj.dmp
+*.map
+
+# Ignore IDE-specific files
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+disassembly/
