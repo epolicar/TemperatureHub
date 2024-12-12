@@ -14127,7 +14127,7 @@ void main(void) {
             temperature = temperature >> 7;
             printf("Temperature: %u\n\r", temperature);
 
-            _delay((unsigned long)((1000)*(12000000/4000.0)));
+            _delay((unsigned long)((100)*(12000000/4000.0)));
         }
     } else {
         test1(2);

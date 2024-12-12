@@ -43,18 +43,6 @@
 #define DEBUG
 
 volatile uint16_t tick_counter = 0; // Timer tick count 
-uint16_t last_uart1_data_tick = 0;
-uint8_t high_byte1; 
-uint8_t low_byte1; 
-uint8_t high_byte2;
-uint8_t low_byte2;
-int data_being_used_by_spi;
-bool data1_ready;
-bool data2_ready;               
-bool data1_latest;
-bool data2_latest;
-bool expecting_high_byte = true;
-
 
 // Function declarations
 void SPI_Write(uint16_t);
@@ -141,19 +129,53 @@ void test1(int loop){
 
 // Define system frequency and baud rate
 #define BAUD_RATE 9600      // Desired baud rate
+uint8_t high_byte_serial, low_byte_serial;
+
+#define BUFFER_SIZE 2
+typedef struct {
+    uint16_t buffer[BUFFER_SIZE];
+    volatile uint8_t head;
+    volatile uint8_t tail;
+    volatile bool full;
+} CircularBuffer;
+
+CircularBuffer dataBuffer = { .head = 0, .tail = 0, .full = false };
+
+// Add data to the buffer
+void buffer_write(CircularBuffer *buf, uint16_t data) {
+    buf->buffer[buf->head] = data;
+    
+    if (buf->full) {
+        buf->tail = (buf->tail + 1) % BUFFER_SIZE;  // Overwrite oldest data
+    }
+
+    buf->head = (buf->head + 1) % BUFFER_SIZE;
+    buf->full = (buf->head == buf->tail);
+}
+
+// Read data from the buffer
+bool buffer_read(CircularBuffer *buf, uint16_t *data) {
+    if (buf->head == buf->tail && !buf->full) {
+        return false;  // Buffer empty
+    }
+
+    *data = buf->buffer[buf->tail];
+    buf->tail = (buf->tail + 1) % BUFFER_SIZE;
+    buf->full = false;
+    return true;
+}
 
 void uart1_handler(void)
 {
-//    if(!data_ptr)
-//    {
     if (tick_counter > TICK_THRESHOLD) {
-        high_byte_spi = EUSART1_Read();
-        data_ptr = 1;
+        high_byte_serial = EUSART1_Read();
     }else {
-        low_byte_spi = EUSART1_Read();
-        data_ptr = 0;
+        low_byte_serial = EUSART1_Read();
+        uint16_t data = (high_byte_serial << 8) | low_byte_serial;
+        buffer_write(&dataBuffer, data);
+        //printf("%x\r\n", data);
     }
-    reset_counter();
+    tick_counter = 0; //reset the counter
 }
 
 void main(void) {
@@ -255,13 +277,6 @@ void main(void) {
         // Slave mode
         //CS_TRIS = 1; //RB3 is input
         SCK_TRIS = 1; //RB5 is inputs
-        uint8_t high_byte, low_byte;
-        uint8_t buffer[2]; 
-        uint16_t data;
-        uint16_t data1;
-        uint16_t data2;
-        bool data_ptr = 0;
-        
         bool detect_high_cs = false;
         UART2_SendString("enabling usart1\n\r");
         EUSART1_Enable();
@@ -276,16 +291,27 @@ void main(void) {
         
         
         UART2_SendString("entering loop\n\r");
+        uint16_t data_temp;
+        uint16_t data_spi = 0x1234;
         while (1) {
-			SSP1BUF = high_byte_spi;
+            start_label:
+            if (buffer_read(&dataBuffer, &data_temp)) {
+                data_spi = data_temp;
+                printf("%x\r\n", data_spi);
+            } 
+            //data_spi = 0x0F80;
+
+			SSP1BUF = data_spi >> 8; //send the high-byte
             data_ptr = 1;
             while (!PIR3bits.SSP1IF)
             {
-                
                 //SS is low, check if SS goes up
                 if(!SS_GetValue()){
                     detect_high_cs = true;
-                } 
+                } else {
+                    //if it's high then read the buffer
+                    goto start_label;
+                }
                 
                 if (detect_high_cs){
                     if(SS_GetValue()){
@@ -299,7 +325,7 @@ void main(void) {
             if(data_ptr)
             {
                 PIR3bits.SSP1IF = 0;       //clear flag to get ready for the next transmission     
-                SSP1BUF = low_byte_spi;                
+                SSP1BUF = data_spi & 0xFF; //send the low-byte
             }
             while (!PIR3bits.SSP1IF)
             {

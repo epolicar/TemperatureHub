@@ -180,7 +180,7 @@ void main(void) {
             temperature = temperature >> 7;
             printf("Temperature: %u\n\r", temperature);  // Debugging output
 #endif
-            __delay_ms(1000);  // Delay 1 second
+            __delay_ms(100);  // Delay 1 second
         }
     } else {
         test1(2);

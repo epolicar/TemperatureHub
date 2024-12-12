@@ -14152,9 +14152,9 @@ void EUSART2_Initialize(void)
 
     TX2STA = 0x26;
 
-    SP2BRGL = 0x38;
+    SP2BRGL = 0x19;
 
-    SP2BRGH = 0x1;
+    SP2BRGH = 0x0;
 
     EUSART2_FramingErrorCallbackRegister(EUSART2_DefaultFramingErrorCallback);
     EUSART2_OverrunErrorCallbackRegister(EUSART2_DefaultOverrunErrorCallback);

@@ -1626,8 +1626,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 181:             printf("Temperature: %u\n\r", temperature);
 [e ( _printf , (. :s 6C -> _temperature `ui ]
 "183
-[; ;main.c: 183:             _delay((unsigned long)((1000)*(12000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+[; ;main.c: 183:             _delay((unsigned long)((100)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
 "184
 [; ;main.c: 184:         }
 }
