@@ -171,6 +171,18 @@
 [v _TRISC TRISC `VEuc  1 e 1 @20 ]
 "918
 [v _TRISD TRISD `VEuc  1 e 1 @21 ]
+[s S1360 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"935
+[u S1369 . 1 `S1360 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES1369  1 e 1 @21 ]
 "980
 [v _TRISE TRISE `VEuc  1 e 1 @22 ]
 "1012
@@ -420,10 +432,10 @@
 [v _IOCEF IOCEF `VEuc  1 e 1 @8043 ]
 "22800
 [v _ANSA0 ANSA0 `VEb  1 e 0 @63936 ]
-"24201
-[v _LATB3 LATB3 `VEb  1 e 0 @203 ]
 "24246
 [v _LATD2 LATD2 `VEb  1 e 0 @218 ]
+"24255
+[v _LATD5 LATD5 `VEb  1 e 0 @221 ]
 "153 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
 [v _prec prec `i  1 s 2 prec ]
 [v _width width `i  1 s 2 width ]
@@ -460,9 +472,9 @@
 "145 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"170
+"173
 [v main@temperature temperature `us  1 a 2 46 ]
-"199
+"201
 } 0
 "119
 [v _test1 test1 `(v  1 e 1 0 ]
@@ -507,9 +519,9 @@
 {
 "1820
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 12 ]
-[s S1760 _IO_FILE 0 ]
+[s S1815 _IO_FILE 0 ]
 "1817
-[v vfprintf@fp fp `*.2S1760  1 p 2 19 ]
+[v vfprintf@fp fp `*.2S1815  1 p 2 19 ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 21 ]
 [v vfprintf@ap ap `*.4*.4v  1 p 1 23 ]
 "1840
@@ -518,18 +530,18 @@
 [v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
 {
 "1669
-[v vfpfcnvrt@cp_1802 cp `*.26uc  1 a 2 10 ]
-[u S1773 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+[v vfpfcnvrt@cp_1857 cp `*.26uc  1 a 2 10 ]
+[u S1828 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
 "1188
-[v vfpfcnvrt@convarg convarg `S1773  1 a 4 14 ]
+[v vfpfcnvrt@convarg convarg `S1828  1 a 4 14 ]
 "1179
 [v vfpfcnvrt@cp cp `*.25uc  1 a 2 12 ]
 [v vfpfcnvrt@c c `uc  1 a 1 18 ]
 "1180
 [v vfpfcnvrt@done done `a  1 a 1 9 ]
-[s S1760 _IO_FILE 0 ]
+[s S1815 _IO_FILE 0 ]
 "1177
-[v vfpfcnvrt@fp fp `*.2S1760  1 p 2 0 ]
+[v vfpfcnvrt@fp fp `*.2S1815  1 p 2 0 ]
 [v vfpfcnvrt@fmt fmt `*.30*.25uc  1 p 1 2 ]
 [v vfpfcnvrt@ap ap `*.39*.4v  1 p 2 3 ]
 "1814
@@ -538,9 +550,9 @@
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 2 ]
-[u S1739 . 2 `*.2uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
-[s S1742 _IO_FILE 11 `S1739 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
-[v fputc@fp fp `*.2S1742  1 p 2 4 ]
+[u S1794 . 2 `*.2uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
+[s S1797 _IO_FILE 11 `S1794 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.2S1797  1 p 2 4 ]
 "24
 } 0
 "98 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
@@ -737,25 +749,6 @@
 [v SPI1_BufferExchange@bufferData bufferData `*.4v  1 p 1 0 ]
 [v SPI1_BufferExchange@bufferSize bufferSize `ui  1 p 2 1 ]
 "123
-} 0
-"81
-[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
-{
-"83
-[v SPI1_Open@returnValue returnValue `a  1 a 1 9 ]
-"81
-[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 6 ]
-"100
-} 0
-"15 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 4 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
-"53
 } 0
 "141 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
 [v _EUSART2_TransmitEnable EUSART2_TransmitEnable `(v  1 e 1 0 ]

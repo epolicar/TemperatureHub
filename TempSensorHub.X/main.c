@@ -245,31 +245,25 @@ void main(void) {
     TMR0_PeriodMatchCallbackRegister(ticker);
 
     TMR0_Start();
-    
-    if (STRAP_PIN) {
-   
+        if (STRAP_PIN)
         /****** Master mode:*******/ 
-        //Master configuration
-        PB_SetDigitalMode(); 
-        SDO_SetDigitalMode();
-        SCK_SetDigitalMode();
-        TX1_SetDigitalMode();
-        RX1_SetDigitalMode();
-        TX2_SetDigitalMode();
-        RX2_SetDigitalMode();
-        SS_SetDigitalMode();
-
-        PB_SetDigitalInput(); //Personality: RA0
-        SDO_SetDigitalInput(); //SPI SDI: RB4
-        SCK_SetDigitalOutput(); // SPI CLK out: RB5
-        TX1_SetDigitalOutput(); // TX: RC6
-        RX1_SetDigitalInput(); // RX: RC7
-        TX2_SetDigitalOutput(); // Debug TX:RD0
-        RX2_SetDigitalInput(); // Debug RX:RD1
-        SS_SetDigitalOutput(); // SPI CS out: RD5
+        //Master configuration /*
+       
+       //set cs as  output
+        TRISDbits.TRISD5 = 0;  // Set D5 as output
+        LATD5 = 1; //set it to high, cs is not not eable by default
+        test1(1);
+        UART2_SendString("Mode: master\n\r");
+        if (SSP1CON1bits.SSPEN == false)
+        {
+            SSP1STAT = 0x0;
+            SSP1CON1 = 0xa;
+            SSP1CON3 = 0x10;
+            SSP1ADD  = 0x17;
+            SSP1CON1bits.SSPEN = 1;
+        }
         
-        SPI1_OpenMaster();
-        
+        //SPI1_Open(1);
         test1(1);
         UART2_SendString("Mode: master\n\r");
         uint16_t temperature;

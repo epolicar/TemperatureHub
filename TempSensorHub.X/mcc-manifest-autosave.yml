@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: slave_TempSensorHub
-creation_date: 2024-12-12T16:15:46.397+08:00[Asia/Singapore]
+creation_date: 2024-12-12T22:27:30.977+08:00[Asia/Singapore]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -27,5 +27,5 @@ modules:
 - {name: '@mchp-mcc/scf-pic8-mssp-v1', type: MELODY, version: 7.0.2}
 - {name: '@mchp-mcc/scf-pic8-osc-v1', type: MELODY, version: 4.3.7}
 - {name: '@mchp-mcc/scf-pic8-tmr0-v1', type: MELODY, version: 5.0.0}
-- {name: '@mchp-mcc/spi-client-driver', type: MELODY, version: 1.2.0}
+- {name: '@mchp-mcc/spi-host-driver', type: MELODY, version: 1.2.1}
 - {name: '@mchp-mcc/uart-driver', type: MELODY, version: 1.10.2}

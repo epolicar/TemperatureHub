@@ -35,7 +35,7 @@
 #include "../mssp1.h"
 #include "../spi_polling_types.h"
 
-const struct SPI_INTERFACE SPI1_Client = {
+const struct SPI_INTERFACE SPI1_Host = {
     .Initialize = SPI1_Initialize,
     .Deinitialize = SPI1_Deinitialize,
     .Open = SPI1_Open,
@@ -53,8 +53,8 @@ const struct SPI_INTERFACE SPI1_Client = {
 };
 
 static const spi_configuration_t spi1_configuration[] = {
-    { 0x0, 0x4, 0x10, 0x01 },
-    { 0x64, 0x4, 0x10, 0x0 }
+    { 0x0, 0xa, 0x10, 0x17 },
+    { 0x64, 0x0, 0x10, 0x1 }
 };
 
 void SPI1_Initialize(void)
@@ -104,8 +104,6 @@ void SPI1_Close(void)
     SSP1CON1bits.SSPEN = 0;
 }
 
-bool high_bytes = true;
-
 void SPI1_BufferExchange(void *bufferData, size_t bufferSize)
 {
     uint8_t *bufferInput = bufferData;
@@ -118,7 +116,7 @@ void SPI1_BufferExchange(void *bufferData, size_t bufferSize)
             // Wait for flag to get set
         }
         PIR3bits.SSP1IF = 0;
-        //*bufferInput = SSP1BUF;
+        *bufferInput = SSP1BUF;
         bufferInput++;
         bufferInputSize--;
     }

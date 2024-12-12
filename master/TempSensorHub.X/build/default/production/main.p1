@@ -98,12 +98,51 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22800
 [; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 22800: extern volatile __bit ANSA0 __attribute__((address(0xF9C0)));
 [v _ANSA0 `Vb ~T0 @X0 0 e@63936 ]
-"24201
-[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 24201: extern volatile __bit LATB3 __attribute__((address(0xCB)));
-[v _LATB3 `Vb ~T0 @X0 0 e@203 ]
-"144 ./mcc_generated_files/system/../spi/mssp1.h
-[; ;./mcc_generated_files/system/../spi/mssp1.h: 144: _Bool SPI1_Open(uint8_t spiConfigIndex);
-[v _SPI1_Open `(a ~T0 @X0 0 ef1`uc ]
+"924
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 924:     struct {
+[s S49 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S49 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"923
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 923: typedef union {
+[u S48 `S49 1 ]
+[n S48 . . ]
+"935
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 935: extern volatile TRISDbits_t TRISDbits __attribute__((address(0x015)));
+[v _TRISDbits `VS48 ~T0 @X0 0 e@21 ]
+"24255
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 24255: extern volatile __bit LATD5 __attribute__((address(0xDD)));
+[v _LATD5 `Vb ~T0 @X0 0 e@221 ]
+"3048
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3048:     struct {
+[s S149 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S149 . SSPM CKP SSPEN SSPOV WCOL ]
+"3055
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3055:     struct {
+[s S150 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S150 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"3061
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3061:     struct {
+[s S151 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S151 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
+"3047
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3047: typedef union {
+[u S148 `S149 1 `S150 1 `S151 1 ]
+[n S148 . . . . ]
+"3072
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3072: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0x190)));
+[v _SSP1CON1bits `VS148 ~T0 @X0 0 e@400 ]
+"2678
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 2678: extern volatile unsigned char SSP1STAT __attribute__((address(0x18F)));
+[v _SSP1STAT `Vuc ~T0 @X0 0 e@399 ]
+"3042
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3042: extern volatile unsigned char SSP1CON1 __attribute__((address(0x190)));
+[v _SSP1CON1 `Vuc ~T0 @X0 0 e@400 ]
+"3349
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 3349: extern volatile unsigned char SSP1CON3 __attribute__((address(0x192)));
+[v _SSP1CON3 `Vuc ~T0 @X0 0 e@402 ]
+"2488
+[; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 2488: extern volatile unsigned char SSP1ADD __attribute__((address(0x18D)));
+[v _SSP1ADD `Vuc ~T0 @X0 0 e@397 ]
 "110 C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h
 [; ;C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h: 110: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1552,142 +1591,136 @@ Version 4.0 HI-TECH Software Intermediate Code
 "151
 [; ;main.c: 151:     ANSA0 = 0;
 [e = _ANSA0 -> -> 0 `i `b ]
-"152
-[; ;main.c: 152:     LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
-"157
-[; ;main.c: 157:    if (1) {
+"156
+[; ;main.c: 156:    if (1) {
 [e $ ! != -> 1 `i -> 0 `i 1074  ]
 {
-"159
-[; ;main.c: 159:         test1(1);
-[e ( _test1 (1 -> 1 `i ]
 "160
-[; ;main.c: 160:         UART2_SendString("Mode: master\n\r");
-[e ( _UART2_SendString (1 :s 3C ]
+[; ;main.c: 160:         TRISDbits.TRISD5 = 0;
+[e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
 "161
-[; ;main.c: 161:         if (SPI1_Open(0)) {
-[e $ ! != -> ( _SPI1_Open (1 -> -> 0 `i `uc `i -> 0 `i 1075  ]
-{
+[; ;main.c: 161:         LATD5 = 1;
+[e = _LATD5 -> -> 1 `i `b ]
 "162
-[; ;main.c: 162:             LATB3 = 0;
-[e = _LATB3 -> -> 0 `i `b ]
+[; ;main.c: 162:         test1(1);
+[e ( _test1 (1 -> 1 `i ]
+"163
+[; ;main.c: 163:         UART2_SendString("Mode: master\n\r");
+[e ( _UART2_SendString (1 :s 3C ]
 "164
-[; ;main.c: 164:             LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
+[; ;main.c: 164:         if (SSP1CON1bits.SSPEN == 0)
+[e $ ! == -> . . _SSP1CON1bits 0 2 `i -> 0 `i 1075  ]
 "165
-[; ;main.c: 165:             UART2_SendString("TMP122_Init done\n\r");
-[e ( _UART2_SendString (1 :s 4C ]
-"166
-[; ;main.c: 166:         } else {
-}
-[e $U 1076  ]
-[e :U 1075 ]
+[; ;main.c: 165:         {
 {
+"166
+[; ;main.c: 166:             SSP1STAT = 0x0;
+[e = _SSP1STAT -> -> 0 `i `uc ]
 "167
-[; ;main.c: 167:             UART2_SendString("halt\n\r");
-[e ( _UART2_SendString (1 :s 5C ]
+[; ;main.c: 167:             SSP1CON1 = 0xa;
+[e = _SSP1CON1 -> -> 10 `i `uc ]
 "168
-[; ;main.c: 168:             while(1);
-[e :U 1078 ]
-[e :U 1077 ]
-[e $U 1078  ]
-[e :U 1079 ]
+[; ;main.c: 168:             SSP1CON3 = 0x10;
+[e = _SSP1CON3 -> -> 16 `i `uc ]
 "169
-[; ;main.c: 169:         }
+[; ;main.c: 169:             SSP1ADD = 0x17;
+[e = _SSP1ADD -> -> 23 `i `uc ]
+"170
+[; ;main.c: 170:             SSP1CON1bits.SSPEN = 1;
+[e = . . _SSP1CON1bits 0 2 -> -> 1 `i `uc ]
+"171
+[; ;main.c: 171:         }
+}
+[e :U 1075 ]
+"173
+[; ;main.c: 173:         uint16_t temperature;
+[v _temperature `us ~T0 @X0 1 a ]
+"175
+[; ;main.c: 175:         while (1) {
+[e :U 1077 ]
+{
+"176
+[; ;main.c: 176:             LATD5 = 0;
+[e = _LATD5 -> -> 0 `i `b ]
+"177
+[; ;main.c: 177:             temperature = read_temperature();
+[e = _temperature ( _read_temperature ..  ]
+"178
+[; ;main.c: 178:             LATD5 = 1;
+[e = _LATD5 -> -> 1 `i `b ]
+"179
+[; ;main.c: 179:             UART_SendChar((temperature >> 8) & 0xFF);
+[e ( _UART_SendChar (1 -> & >> -> _temperature `ui -> 8 `i -> -> 255 `i `ui `uc ]
+"180
+[; ;main.c: 180:             UART_SendChar(temperature & 0xFF);
+[e ( _UART_SendChar (1 -> & -> _temperature `ui -> -> 255 `i `ui `uc ]
+"182
+[; ;main.c: 182:             temperature = temperature >> 7;
+[e = _temperature -> >> -> _temperature `ui -> 7 `i `us ]
+"183
+[; ;main.c: 183:             printf("Temperature: %u\n\r", temperature);
+[e ( _printf , (. :s 4C -> _temperature `ui ]
+"185
+[; ;main.c: 185:             _delay((unsigned long)((100)*(12000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
+"186
+[; ;main.c: 186:         }
 }
 [e :U 1076 ]
-"170
-[; ;main.c: 170:         uint16_t temperature;
-[v _temperature `us ~T0 @X0 1 a ]
-"172
-[; ;main.c: 172:         while (1) {
+[e $U 1077  ]
+[e :U 1078 ]
+"187
+[; ;main.c: 187:     } else {
+}
+[e $U 1079  ]
+[e :U 1074 ]
+{
+"188
+[; ;main.c: 188:         test1(2);
+[e ( _test1 (1 -> 2 `i ]
+"190
+[; ;main.c: 190:         uint8_t high_byte, low_byte;
+[v _high_byte `uc ~T0 @X0 1 a ]
+[v _low_byte `uc ~T0 @X0 1 a ]
+"191
+[; ;main.c: 191:         uint16_t data;
+[v _data `us ~T0 @X0 1 a ]
+"193
+[; ;main.c: 193:         while (1) {
 [e :U 1081 ]
 {
-"173
-[; ;main.c: 173:             LATB3 = 0;
-[e = _LATB3 -> -> 0 `i `b ]
-"174
-[; ;main.c: 174:             temperature = read_temperature();
-[e = _temperature ( _read_temperature ..  ]
-"176
-[; ;main.c: 176:             LATB3 = 1;
-[e = _LATB3 -> -> 1 `i `b ]
-"177
-[; ;main.c: 177:             UART_SendChar((temperature >> 8) & 0xFF);
-[e ( _UART_SendChar (1 -> & >> -> _temperature `ui -> 8 `i -> -> 255 `i `ui `uc ]
-"178
-[; ;main.c: 178:             UART_SendChar(temperature & 0xFF);
-[e ( _UART_SendChar (1 -> & -> _temperature `ui -> -> 255 `i `ui `uc ]
-"180
-[; ;main.c: 180:             temperature = temperature >> 7;
-[e = _temperature -> >> -> _temperature `ui -> 7 `i `us ]
-"181
-[; ;main.c: 181:             printf("Temperature: %u\n\r", temperature);
-[e ( _printf , (. :s 6C -> _temperature `ui ]
-"183
-[; ;main.c: 183:             _delay((unsigned long)((100)*(12000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 12000000 `l `d .4000.0 `ul ]
-"184
-[; ;main.c: 184:         }
+"194
+[; ;main.c: 194:             high_byte = UART_ReceiveChar();
+[e = _high_byte ( _UART_ReceiveChar ..  ]
+"195
+[; ;main.c: 195:             low_byte = UART_ReceiveChar();
+[e = _low_byte ( _UART_ReceiveChar ..  ]
+"196
+[; ;main.c: 196:             data = (high_byte << 8) | low_byte;
+[e = _data -> | << -> _high_byte `i -> 8 `i -> _low_byte `i `us ]
+"197
+[; ;main.c: 197:             SPI_Write(data);
+[e ( _SPI_Write (1 _data ]
+"198
+[; ;main.c: 198:             printf("Received data: %u\n", data);
+[e ( _printf , (. :s 5C -> _data `ui ]
+"199
+[; ;main.c: 199:         }
 }
 [e :U 1080 ]
 [e $U 1081  ]
 [e :U 1082 ]
-"185
-[; ;main.c: 185:     } else {
+"200
+[; ;main.c: 200:     }
 }
-[e $U 1083  ]
-[e :U 1074 ]
-{
-"186
-[; ;main.c: 186:         test1(2);
-[e ( _test1 (1 -> 2 `i ]
-"188
-[; ;main.c: 188:         uint8_t high_byte, low_byte;
-[v _high_byte `uc ~T0 @X0 1 a ]
-[v _low_byte `uc ~T0 @X0 1 a ]
-"189
-[; ;main.c: 189:         uint16_t data;
-[v _data `us ~T0 @X0 1 a ]
-"191
-[; ;main.c: 191:         while (1) {
-[e :U 1085 ]
-{
-"192
-[; ;main.c: 192:             high_byte = UART_ReceiveChar();
-[e = _high_byte ( _UART_ReceiveChar ..  ]
-"193
-[; ;main.c: 193:             low_byte = UART_ReceiveChar();
-[e = _low_byte ( _UART_ReceiveChar ..  ]
-"194
-[; ;main.c: 194:             data = (high_byte << 8) | low_byte;
-[e = _data -> | << -> _high_byte `i -> 8 `i -> _low_byte `i `us ]
-"195
-[; ;main.c: 195:             SPI_Write(data);
-[e ( _SPI_Write (1 _data ]
-"196
-[; ;main.c: 196:             printf("Received data: %u\n", data);
-[e ( _printf , (. :s 7C -> _data `ui ]
-"197
-[; ;main.c: 197:         }
-}
-[e :U 1084 ]
-[e $U 1085  ]
-[e :U 1086 ]
-"198
-[; ;main.c: 198:     }
-}
-[e :U 1083 ]
-"199
-[; ;main.c: 199: }
+[e :U 1079 ]
+"201
+[; ;main.c: 201: }
 [e :UE 1073 ]
 }
 [p f _printf 8651776 ]
 [a 1C 83 80 73 32 82 101 97 100 32 69 114 114 111 114 0 ]
-[a 6C 84 101 109 112 101 114 97 116 117 114 101 58 32 37 117 10 13 0 ]
-[a 5C 104 97 108 116 10 13 0 ]
+[a 4C 84 101 109 112 101 114 97 116 117 114 101 58 32 37 117 10 13 0 ]
 [a 3C 77 111 100 101 58 32 109 97 115 116 101 114 10 13 0 ]
-[a 4C 84 77 80 49 50 50 95 73 110 105 116 32 100 111 110 101 10 13 0 ]
-[a 7C 82 101 99 101 105 118 101 100 32 100 97 116 97 58 32 37 117 10 0 ]
+[a 5C 82 101 99 101 105 118 101 100 32 100 97 116 97 58 32 37 117 10 0 ]
 [a 2C 69 114 114 111 114 58 32 37 115 10 0 ]

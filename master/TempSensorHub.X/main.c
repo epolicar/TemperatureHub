@@ -149,31 +149,33 @@ void main(void) {
     EUSART2_TransmitEnable();
     TRISAbits.TRISA0 = 1;  // Set STRAP_PIN as input
     ANSA0 = 0; 
-    LATB3 = 1; 
-
-        
     
+    
+
  //   if (STRAP_PIN) {
    if (true) {    
         // Master mode
+       
+       //set cs as  output
+        TRISDbits.TRISD5 = 0;  // Set D5 as output
+        LATD5 = 1; //set it to high, cs is not not eable by default
         test1(1);
         UART2_SendString("Mode: master\n\r");
-        if (SPI1_Open(0)) {
-            LATB3 = 0;
-            //TMP122_Init();
-            LATB3 = 1;
-            UART2_SendString("TMP122_Init done\n\r");
-        } else {
-            UART2_SendString("halt\n\r");
-            while(1);
+        if (SSP1CON1bits.SSPEN == false)
+        {
+            SSP1STAT = 0x0;
+            SSP1CON1 = 0xa;
+            SSP1CON3 = 0x10;
+            SSP1ADD  = 0x17;
+            SSP1CON1bits.SSPEN = 1;
         }
+
         uint16_t temperature;  
 
         while (1) {
-            LATB3 = 0; 
+            LATD5 = 0; 
             temperature = read_temperature();
-            
-            LATB3 = 1; 
+            LATD5 = 1; 
             UART_SendChar((temperature >> 8) & 0xFF);  // Send high byte
             UART_SendChar(temperature & 0xFF);  // Send low byte
 #ifdef DEBUG
