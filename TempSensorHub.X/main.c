@@ -77,17 +77,6 @@ void uart1_handler(void);
 
 // Function implementations
 
-//void SPI_Write(uint16_t data) {
-////    SDI_SetDigitalOutput(); //set RB4 as output
-//
-//    uint8_t buffer[2];
-//    buffer[0] = (data >> 8) & 0xFF; // High byte 
-//    buffer[1] = data & 0xFF; // Low byte
-//    printf("buffer0 is %x \n\r", buffer[0]);
-//    printf("buffer1 is %x \n\r", buffer[1]);       
-//    SPI1_BufferExchange(&buffer[0], 2); // Send the buffer }
-//}
-
 uint16_t SPI_Read(void) {
 //    SDI_SetDigitalInput(); //set RB4 as input											 
     uint8_t buffer[2]; 
@@ -118,15 +107,6 @@ void UART_SendChar(uint8_t data) {
     EUSART1_Write(data);
 }
 
-//uint8_t UART_ReceiveChar(void) {
-//    while (!UART1__IsRxReady());
-//    return EUSART1_Read();
-//}
-//
-//void TMP122_Init(void) {
-//    SPI_Write(0x3E87);  // Initialize TMP122's high temp threshold to 125 degC
-//    SPI_Write(0x0007);  // Initialize TMP122's high temp threshold to 125 degC
-//}
 
 uint16_t read_temperature(void) {
     return SPI_Read();  // Read temperature data
@@ -159,88 +139,8 @@ void test1(int loop){
     }
 }
 
-//void UART_WriteString(const char *message)
-//{
-//    for(int i = 0; i < (int)strlen(message); i++)
-//    {
-//        while(!UART2.IsTxReady())
-//        {
-//            ;
-//        };
-//        (void) UART2.Write(message[i]);
-//    }
-//}
-
 // Define system frequency and baud rate
 #define BAUD_RATE 9600      // Desired baud rate
-
-//void process_serial_data(void) {
-//    if (!EUSART1_IsRxReady())
-//    {
-//        if (tick_counter < TICK_THRESHOLD) { 
-//            // Received byte within threshold, it's the low byte 
-//            if(data_being_used_by_spi != 1){
-//                low_byte1 = EUSART1_Read();
-//                data1_ready = true;
-//                data2_latest = false;
-//                data1_latest = true;
-//            } else if(data_being_used_by_spi != 2) {
-//                low_byte2 = EUSART1_Read();
-//                data2_ready = true;
-//                data1_latest = false;
-//                data2_latest = true;                
-//            }
-//    //        expecting_high_byte = true; 
-//        } else { 
-//            // Received byte after a long time, it's the high byte 
-//            if(data_being_used_by_spi != 1){
-//                data1_ready = false;
-//                high_byte1 = EUSART1_Read();
-//            } else if(data_being_used_by_spi != 2){
-//                data2_ready = false;
-//                high_byte2 = EUSART1_Read();
-//            }
-//    //        expecting_high_byte = false; 
-//        } 
-//        reset_counter(); // Reset tick count after processing
-//    }
-//}
-//software base. 
-//IT"S TOO SLOW.. around 8uSecond response. 
-//void response_to_spi(void)
-//{
-//    if(!SS_GetValue()){
-//        uint16_t data = 0xaaaa;
-//        uint16_t mask = 0x8000;
-//        bool val = true;
-//        for( int i=1; i<16; i++)
-//        {
-//            SDI_SetHigh();
-//            /*
-//            if(val){
-//                SDI_SetHigh();
-//                val = false;
-//            } else {
-//                SDI_SetLow();
-//                val = true;
-//            } */
-//            //push the data
-//            /*
-//            if(data & mask){
-//                SDI_SetHigh();
-//            } else  {
-//                SDI_SetLow();
-//            }
-//            mask = mask >> 1;
-//             */
-//            //wait for clock to go high
-//            while(!SCK_GetValue());
-//            SDI_SetLow();
-//            //wait for clock to go low
-//            while(SCK_GetValue());
-//        }
-//    }
-//}
 
 void uart1_handler(void)
 {
@@ -327,7 +227,7 @@ void main(void) {
                   //SSP1CON3 = 0x10 -> bit4 (BOEN) SSPxBUF updates every time that a 
                   //                               new data byte is shifted in ignoring the BF bit 
                   //SSP1ADD  = 0x0f -> 125kHz
-    TMR0_Start;
+    TMR0_Start();
     
     if (STRAP_PIN) {
 //   if (false) {    
@@ -335,15 +235,6 @@ void main(void) {
         /****SS out put at RB3*****/
         test1(1);
         UART2_SendString("Mode: master\n\r");
-//        if (SPI1_Open(0)) {
-//            LATB3 = 0;
-//            //TMP122_Init();
-//            LATB3 = 1;
-//            UART2_SendString("TMP122_Init done\n\r");
-//        } else {
-//            UART2_SendString("halt\n\r");
-//            while(1);
-//        }
         uint16_t temperature;
 
         while (1) {
@@ -360,28 +251,16 @@ void main(void) {
             __delay_ms(50);  // Delay 1 second
         }
     } else {
-        //test1(2);
         UART2_SendString("Mode: slave\n\r");
         // Slave mode
- //       SSP1CON1 = 0x05;
         //CS_TRIS = 1; //RB3 is input
         SCK_TRIS = 1; //RB5 is inputs
         uint8_t high_byte, low_byte;
         uint8_t buffer[2]; 
-        // CS/SS is input active low
-        //CS_TRIS = 1; // set RB3 as Input
         uint16_t data;
         uint16_t data1;
         uint16_t data2;
-        //manual override
-        //SDI_TRIS = 0; //set sdi/o as output
-
-//        while(1){
-//            response_to_spi();
-//        }
-        
         bool data_ptr = 0;
-//        IO_RD5_TRIS = 1;
         
         bool detect_high_cs = false;
         UART2_SendString("enabling usart1\n\r");
@@ -398,14 +277,6 @@ void main(void) {
         
         UART2_SendString("entering loop\n\r");
         while (1) {
-            //high_byte = UART_ReceiveChar();
-            //low_byte = UART_ReceiveChar();
-            //data = (high_byte << 8) | low_byte;  // Combine high and low bytes
-                //printf("Received data: %x\n\r", data);  // Debugging output
-            //printf("waiting for master to read the data\n\r");
-            //SPI_Write(data);  // Send data via SPI
-//            process_serial_data();
-            
 			SSP1BUF = high_byte_spi;
             data_ptr = 1;
             while (!PIR3bits.SSP1IF)
@@ -437,27 +308,6 @@ void main(void) {
                     data_ptr = 0;
                     break;
                 }
-
-//                data1 = ((uint16_t)high_byte1 << 8) | (uint16_t)low_byte1; // Combine high and low bytes
-//                data2 = ((uint16_t)high_byte2 << 8) | (uint16_t)low_byte2; // Combine high and low bytes
-
-                
-//            if (SS_GetValue() == 0) {            // Transmit SPI data when CS/SS is low.
-//                if(data1_ready && data1_latest){
-//                    data_being_used_by_spi = 1;
-//                    SPI_Write(data1);
-//                    data = data1;
-//                } else if (data2_ready && data2_latest){
-//                    data_being_used_by_spi = 2;
-//                    SPI_Write(data2);
-//                    data = data2;
-//                } else {
-//                    data_being_used_by_spi = 0;
-//                    SPI_Write(DEFAULT_TEMPERATURE);
-//                    data = DEFAULT_TEMPERATURE;
-//                }
-//                printf("Sent data: %u\n", data);  // Debugging output
-// 
             }
         }
     }

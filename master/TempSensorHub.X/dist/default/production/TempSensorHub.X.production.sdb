@@ -1,0 +1,769 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F15376 ]
+[d frameptr 6 ]
+"1177 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+"1817
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"55 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _SPI_Write SPI_Write `(v  1 e 1 0 ]
+"62
+[v _SPI_Read SPI_Read `(us  1 e 2 0 ]
+"75
+[v _UART2_SendChar UART2_SendChar `(v  1 e 1 0 ]
+"81
+[v _UART2_SendString UART2_SendString `(v  1 e 1 0 ]
+"88
+[v _UART_SendChar UART_SendChar `(v  1 e 1 0 ]
+"93
+[v _UART_ReceiveChar UART_ReceiveChar `(uc  1 e 1 0 ]
+"98
+[v _putch putch `(v  1 e 1 0 ]
+"107
+[v _read_temperature read_temperature `(us  1 e 2 0 ]
+"111
+[v _Error_Handler Error_Handler `(v  1 e 1 0 ]
+"119
+[v _test1 test1 `(v  1 e 1 0 ]
+"145
+[v _main main `(v  1 e 1 0 ]
+"60 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"72
+[v _SPI1_Deinitialize SPI1_Deinitialize `(v  1 e 1 0 ]
+"81
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+"102
+[v _SPI1_Close SPI1_Close `(v  1 e 1 0 ]
+"107
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+"125
+[v _SPI1_BufferWrite SPI1_BufferWrite `(v  1 e 1 0 ]
+"142
+[v _SPI1_BufferRead SPI1_BufferRead `(v  1 e 1 0 ]
+"160
+[v _SPI1_ByteExchange SPI1_ByteExchange `(uc  1 e 1 0 ]
+"171
+[v _SPI1_ByteWrite SPI1_ByteWrite `(v  1 e 1 0 ]
+"176
+[v _SPI1_ByteRead SPI1_ByteRead `(uc  1 e 1 0 ]
+"185
+[v _SPI1_IsRxReady SPI1_IsRxReady `(a  1 e 1 0 ]
+"199
+[v _SPI1_IsTxReady SPI1_IsTxReady `(a  1 e 1 0 ]
+"39 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"40 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"60
+[v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
+"69
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+"73
+[v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"39 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"99 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+"120
+[v _EUSART1_Deinitialize EUSART1_Deinitialize `(v  1 e 1 0 ]
+"141
+[v _EUSART1_TransmitEnable EUSART1_TransmitEnable `(v  1 e 1 0 ]
+"146
+[v _EUSART1_TransmitDisable EUSART1_TransmitDisable `(v  1 e 1 0 ]
+"171
+[v _EUSART1_AutoBaudSet EUSART1_AutoBaudSet `(v  1 e 1 0 ]
+"183
+[v _EUSART1_AutoBaudQuery EUSART1_AutoBaudQuery `(a  1 e 1 0 ]
+"198
+[v _EUSART1_IsRxReady EUSART1_IsRxReady `(a  1 e 1 0 ]
+"203
+[v _EUSART1_IsTxReady EUSART1_IsTxReady `(a  1 e 1 0 ]
+"208
+[v _EUSART1_IsTxDone EUSART1_IsTxDone `(a  1 e 1 0 ]
+"213
+[v _EUSART1_ErrorGet EUSART1_ErrorGet `(ui  1 e 2 0 ]
+"218
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+"240
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+"245
+[v _EUSART1_DefaultFramingErrorCallback EUSART1_DefaultFramingErrorCallback `(v  1 s 1 EUSART1_DefaultFramingErrorCallback ]
+"250
+[v _EUSART1_DefaultOverrunErrorCallback EUSART1_DefaultOverrunErrorCallback `(v  1 s 1 EUSART1_DefaultOverrunErrorCallback ]
+"257
+[v _EUSART1_FramingErrorCallbackRegister EUSART1_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+"265
+[v _EUSART1_OverrunErrorCallbackRegister EUSART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+"99 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
+"120
+[v _EUSART2_Deinitialize EUSART2_Deinitialize `(v  1 e 1 0 ]
+"129
+[v _EUSART2_Enable EUSART2_Enable `(v  1 e 1 0 ]
+"141
+[v _EUSART2_TransmitEnable EUSART2_TransmitEnable `(v  1 e 1 0 ]
+"146
+[v _EUSART2_TransmitDisable EUSART2_TransmitDisable `(v  1 e 1 0 ]
+"171
+[v _EUSART2_AutoBaudSet EUSART2_AutoBaudSet `(v  1 e 1 0 ]
+"183
+[v _EUSART2_AutoBaudQuery EUSART2_AutoBaudQuery `(a  1 e 1 0 ]
+"198
+[v _EUSART2_IsRxReady EUSART2_IsRxReady `(a  1 e 1 0 ]
+"203
+[v _EUSART2_IsTxReady EUSART2_IsTxReady `(a  1 e 1 0 ]
+"208
+[v _EUSART2_IsTxDone EUSART2_IsTxDone `(a  1 e 1 0 ]
+"213
+[v _EUSART2_ErrorGet EUSART2_ErrorGet `(ui  1 e 2 0 ]
+"218
+[v _EUSART2_Read EUSART2_Read `(uc  1 e 1 0 ]
+"240
+[v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
+"245
+[v _EUSART2_DefaultFramingErrorCallback EUSART2_DefaultFramingErrorCallback `(v  1 s 1 EUSART2_DefaultFramingErrorCallback ]
+"250
+[v _EUSART2_DefaultOverrunErrorCallback EUSART2_DefaultOverrunErrorCallback `(v  1 s 1 EUSART2_DefaultOverrunErrorCallback ]
+"257
+[v _EUSART2_FramingErrorCallbackRegister EUSART2_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+"265
+[v _EUSART2_OverrunErrorCallbackRegister EUSART2_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+"732 C:/Users/home1/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.25.389/xc8\pic\include\proc\pic16f15376.h
+[v _TRISA TRISA `VEuc  1 e 1 @18 ]
+[s S1338 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"749
+[u S1347 . 1 `S1338 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES1347  1 e 1 @18 ]
+"794
+[v _TRISB TRISB `VEuc  1 e 1 @19 ]
+"856
+[v _TRISC TRISC `VEuc  1 e 1 @20 ]
+"918
+[v _TRISD TRISD `VEuc  1 e 1 @21 ]
+"980
+[v _TRISE TRISE `VEuc  1 e 1 @22 ]
+"1012
+[v _LATA LATA `VEuc  1 e 1 @24 ]
+"1074
+[v _LATB LATB `VEuc  1 e 1 @25 ]
+"1136
+[v _LATC LATC `VEuc  1 e 1 @26 ]
+"1198
+[v _LATD LATD `VEuc  1 e 1 @27 ]
+"1260
+[v _LATE LATE `VEuc  1 e 1 @28 ]
+"1634
+[v _RC1REG RC1REG `VEuc  1 e 1 @281 ]
+"1688
+[v _TX1REG TX1REG `VEuc  1 e 1 @282 ]
+"1754
+[v _SP1BRGL SP1BRGL `VEuc  1 e 1 @283 ]
+"1808
+[v _SP1BRGH SP1BRGH `VEuc  1 e 1 @284 ]
+"1862
+[v _RC1STA RC1STA `VEuc  1 e 1 @285 ]
+[s S650 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1888
+[u S659 . 1 `S650 1 . 1 0 ]
+[v _RC1STAbits RC1STAbits `VES659  1 e 1 @285 ]
+"2042
+[v _TX1STA TX1STA `VEuc  1 e 1 @286 ]
+[s S671 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"2068
+[u S680 . 1 `S671 1 . 1 0 ]
+[v _TX1STAbits TX1STAbits `VES680  1 e 1 @286 ]
+"2222
+[v _BAUD1CON BAUD1CON `VEuc  1 e 1 @287 ]
+[s S692 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"2256
+[u S701 . 1 `S692 1 . 1 0 ]
+[v _BAUD1CONbits BAUD1CONbits `VES701  1 e 1 @287 ]
+"2468
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @396 ]
+"2488
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @397 ]
+"2678
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @399 ]
+"3042
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @400 ]
+[s S201 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3072
+[s S207 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[s S212 . 1 `uc 1 SSPM01 1 0 :1:0 
+`uc 1 SSPM11 1 0 :1:1 
+`uc 1 SSPM21 1 0 :1:2 
+`uc 1 SSPM31 1 0 :1:3 
+`uc 1 CKP1 1 0 :1:4 
+`uc 1 SSPEN1 1 0 :1:5 
+`uc 1 SSPOV1 1 0 :1:6 
+`uc 1 WCOL1 1 0 :1:7 
+]
+[u S221 . 1 `S201 1 . 1 0 `S207 1 . 1 0 `S212 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES221  1 e 1 @400 ]
+"3349
+[v _SSP1CON3 SSP1CON3 `VEuc  1 e 1 @402 ]
+[s S326 . 1 `uc 1 INTF 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 IOCIF 1 0 :1:4 
+`uc 1 TMR0IF 1 0 :1:5 
+]
+"9280
+[u S331 . 1 `S326 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES331  1 e 1 @1804 ]
+[s S176 . 1 `uc 1 SSP1IF 1 0 :1:0 
+`uc 1 BCL1IF 1 0 :1:1 
+`uc 1 SSP2IF 1 0 :1:2 
+`uc 1 BCL2IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 TX2IF 1 0 :1:6 
+`uc 1 RC2IF 1 0 :1:7 
+]
+"9389
+[u S185 . 1 `S176 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES185  1 e 1 @1807 ]
+[s S155 . 1 `uc 1 SSP1IE 1 0 :1:0 
+`uc 1 BCL1IE 1 0 :1:1 
+`uc 1 SSP2IE 1 0 :1:2 
+`uc 1 BCL2IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 TX2IE 1 0 :1:6 
+`uc 1 RC2IE 1 0 :1:7 
+]
+"9695
+[u S164 . 1 `S155 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES164  1 e 1 @1817 ]
+"11174
+[v _OSCCON1 OSCCON1 `VEuc  1 e 1 @2189 ]
+"11314
+[v _OSCCON3 OSCCON3 `VEuc  1 e 1 @2191 ]
+"11411
+[v _OSCEN OSCEN `VEuc  1 e 1 @2193 ]
+"11462
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @2194 ]
+"11520
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @2195 ]
+"12504
+[v _RC2REG RC2REG `VEuc  1 e 1 @2585 ]
+"12542
+[v _TX2REG TX2REG `VEuc  1 e 1 @2586 ]
+"12587
+[v _SP2BRGL SP2BRGL `VEuc  1 e 1 @2587 ]
+"12625
+[v _SP2BRGH SP2BRGH `VEuc  1 e 1 @2588 ]
+"12663
+[v _RC2STA RC2STA `VEuc  1 e 1 @2589 ]
+"12685
+[v _RC2STAbits RC2STAbits `VES659  1 e 1 @2589 ]
+"12785
+[v _TX2STA TX2STA `VEuc  1 e 1 @2590 ]
+"12807
+[v _TX2STAbits TX2STAbits `VES680  1 e 1 @2590 ]
+"12907
+[v _BAUD2CON BAUD2CON `VEuc  1 e 1 @2591 ]
+"12933
+[v _BAUD2CONbits BAUD2CONbits `VES701  1 e 1 @2591 ]
+"18109
+[v _SSP1CLKPPS SSP1CLKPPS `VEuc  1 e 1 @7877 ]
+"18167
+[v _SSP1DATPPS SSP1DATPPS `VEuc  1 e 1 @7878 ]
+"18457
+[v _RX1DTPPS RX1DTPPS `VEuc  1 e 1 @7883 ]
+"18573
+[v _RX2DTPPS RX2DTPPS `VEuc  1 e 1 @7885 ]
+"19261
+[v _RB5PPS RB5PPS `VEuc  1 e 1 @7965 ]
+"19305
+[v _RB6PPS RB6PPS `VEuc  1 e 1 @7966 ]
+"19657
+[v _RC6PPS RC6PPS `VEuc  1 e 1 @7974 ]
+"19745
+[v _RD0PPS RD0PPS `VEuc  1 e 1 @7976 ]
+"20229
+[v _ANSELA ANSELA `VEuc  1 e 1 @7992 ]
+"20291
+[v _WPUA WPUA `VEuc  1 e 1 @7993 ]
+"20353
+[v _ODCONA ODCONA `VEuc  1 e 1 @7994 ]
+"20415
+[v _SLRCONA SLRCONA `VEuc  1 e 1 @7995 ]
+"20477
+[v _INLVLA INLVLA `VEuc  1 e 1 @7996 ]
+"20539
+[v _IOCAP IOCAP `VEuc  1 e 1 @7997 ]
+"20601
+[v _IOCAN IOCAN `VEuc  1 e 1 @7998 ]
+"20663
+[v _IOCAF IOCAF `VEuc  1 e 1 @7999 ]
+"20725
+[v _ANSELB ANSELB `VEuc  1 e 1 @8003 ]
+"20787
+[v _WPUB WPUB `VEuc  1 e 1 @8004 ]
+"20849
+[v _ODCONB ODCONB `VEuc  1 e 1 @8005 ]
+"20911
+[v _SLRCONB SLRCONB `VEuc  1 e 1 @8006 ]
+"20973
+[v _INLVLB INLVLB `VEuc  1 e 1 @8007 ]
+"21035
+[v _IOCBP IOCBP `VEuc  1 e 1 @8008 ]
+"21097
+[v _IOCBN IOCBN `VEuc  1 e 1 @8009 ]
+"21159
+[v _IOCBF IOCBF `VEuc  1 e 1 @8010 ]
+"21221
+[v _ANSELC ANSELC `VEuc  1 e 1 @8014 ]
+"21283
+[v _WPUC WPUC `VEuc  1 e 1 @8015 ]
+"21345
+[v _ODCONC ODCONC `VEuc  1 e 1 @8016 ]
+"21407
+[v _SLRCONC SLRCONC `VEuc  1 e 1 @8017 ]
+"21469
+[v _INLVLC INLVLC `VEuc  1 e 1 @8018 ]
+"21531
+[v _IOCCP IOCCP `VEuc  1 e 1 @8019 ]
+"21593
+[v _IOCCN IOCCN `VEuc  1 e 1 @8020 ]
+"21655
+[v _IOCCF IOCCF `VEuc  1 e 1 @8021 ]
+"21717
+[v _ANSELD ANSELD `VEuc  1 e 1 @8025 ]
+"21779
+[v _WPUD WPUD `VEuc  1 e 1 @8026 ]
+"21841
+[v _ODCOND ODCOND `VEuc  1 e 1 @8027 ]
+"21903
+[v _SLRCOND SLRCOND `VEuc  1 e 1 @8028 ]
+"21965
+[v _INLVLD INLVLD `VEuc  1 e 1 @8029 ]
+"22027
+[v _ANSELE ANSELE `VEuc  1 e 1 @8036 ]
+"22059
+[v _WPUE WPUE `VEuc  1 e 1 @8037 ]
+"22097
+[v _ODCONE ODCONE `VEuc  1 e 1 @8038 ]
+"22129
+[v _SLRCONE SLRCONE `VEuc  1 e 1 @8039 ]
+"22161
+[v _INLVLE INLVLE `VEuc  1 e 1 @8040 ]
+"22199
+[v _IOCEP IOCEP `VEuc  1 e 1 @8041 ]
+"22220
+[v _IOCEN IOCEN `VEuc  1 e 1 @8042 ]
+"22241
+[v _IOCEF IOCEF `VEuc  1 e 1 @8043 ]
+"22800
+[v _ANSA0 ANSA0 `VEb  1 e 0 @63936 ]
+"24201
+[v _LATB3 LATB3 `VEb  1 e 0 @203 ]
+"24246
+[v _LATD2 LATD2 `VEb  1 e 0 @218 ]
+"153 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"154
+[v _flags flags `uc  1 s 1 flags ]
+"185
+[v _dbuf dbuf `[32]uc  1 s 32 dbuf ]
+[s S149 . 5 `uc 1 stat 1 0 `uc 1 con1 1 1 `uc 1 con3 1 2 `uc 1 baud 1 3 `uc 1 clock 1 4 ]
+"55 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/spi/src/mssp1.c
+[v _spi1_configuration spi1_configuration `DC[2]S149  1 s 10 spi1_configuration ]
+"38 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/interrupt.c
+[v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
+[s S625 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"82 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[u S630 . 2 `S625 1 . 1 0 `ui 1 status 2 0 ]
+[v _eusart1RxLastError eusart1RxLastError `VES630  1 s 2 eusart1RxLastError ]
+"88
+[v _EUSART1_FramingErrorHandler EUSART1_FramingErrorHandler `*.37(v  1 s 2 EUSART1_FramingErrorHandler ]
+"89
+[v _EUSART1_OverrunErrorHandler EUSART1_OverrunErrorHandler `*.37(v  1 s 2 EUSART1_OverrunErrorHandler ]
+[s S482 . 48 `*.37(v 1 Initialize 2 0 `*.37(v 1 Deinitialize 2 2 `*.37(uc 1 Read 2 4 `*.37(v 1 Write 2 6 `*.37(a 1 IsRxReady 2 8 `*.37(a 1 IsTxReady 2 10 `*.37(a 1 IsTxDone 2 12 `*.37(v 1 TransmitEnable 2 14 `*.37(v 1 TransmitDisable 2 16 `*.37(v 1 AutoBaudSet 2 18 `*.37(a 1 AutoBaudQuery 2 20 `*.37(a 1 AutoBaudEventEnableGet 2 22 `*.37(v 1 BRGCountSet 2 24 `*.37(ul 1 BRGCountGet 2 26 `*.37(v 1 BaudRateSet 2 28 `*.37(ul 1 BaudRateGet 2 30 `*.37(ui 1 ErrorGet 2 32 `*.37(v 1 TxCompleteCallbackRegister 2 34 `*.37(v 1 RxCompleteCallbackRegister 2 36 `*.37(v 1 TxCollisionCallbackRegister 2 38 `*.37(v 1 FramingErrorCallbackRegister 2 40 `*.37(v 1 OverrunErrorCallbackRegister 2 42 `*.37(v 1 ParityErrorCallbackRegister 2 44 `*.37(v 1 EventCallbackRegister 2 46 ]
+"47 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _UART2 UART2 `DCS482  1 e 48 0 ]
+"82
+[v _eusart2RxLastError eusart2RxLastError `VES630  1 s 2 eusart2RxLastError ]
+"88
+[v _EUSART2_FramingErrorHandler EUSART2_FramingErrorHandler `*.37(v  1 s 2 EUSART2_FramingErrorHandler ]
+"89
+[v _EUSART2_OverrunErrorHandler EUSART2_OverrunErrorHandler `*.37(v  1 s 2 EUSART2_OverrunErrorHandler ]
+"145 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"170
+[v main@temperature temperature `us  1 a 2 46 ]
+"199
+} 0
+"119
+[v _test1 test1 `(v  1 e 1 0 ]
+{
+"120
+[v test1@i i `i  1 a 2 4 ]
+"119
+[v test1@loop loop `i  1 p 2 0 ]
+"127
+} 0
+"107
+[v _read_temperature read_temperature `(us  1 e 2 0 ]
+{
+"109
+} 0
+"62
+[v _SPI_Read SPI_Read `(us  1 e 2 0 ]
+{
+"63
+[v SPI_Read@buffer buffer `[2]uc  1 a 2 40 ]
+"66
+[v SPI_Read@data data `us  1 a 2 38 ]
+"73
+} 0
+"111
+[v _Error_Handler Error_Handler `(v  1 e 1 0 ]
+{
+[v Error_Handler@message message `*.25uc  1 p 2 29 ]
+"115
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.4v  1 a 1 28 ]
+"5
+[v printf@fmt fmt `*.25DCuc  1 p 2 24 ]
+"13
+} 0
+"1817 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1820
+[v vfprintf@cfmt cfmt `*.25uc  1 a 2 12 ]
+[s S1760 _IO_FILE 0 ]
+"1817
+[v vfprintf@fp fp `*.2S1760  1 p 2 19 ]
+[v vfprintf@fmt fmt `*.25DCuc  1 p 2 21 ]
+[v vfprintf@ap ap `*.4*.4v  1 p 1 23 ]
+"1840
+} 0
+"1177
+[v _vfpfcnvrt vfpfcnvrt `(v  1 s 1 vfpfcnvrt ]
+{
+"1669
+[v vfpfcnvrt@cp_1802 cp `*.26uc  1 a 2 10 ]
+[u S1773 . 4 `i 1 sint 2 0 `ui 1 uint 2 0 `d 1 f 4 0 ]
+"1188
+[v vfpfcnvrt@convarg convarg `S1773  1 a 4 14 ]
+"1179
+[v vfpfcnvrt@cp cp `*.25uc  1 a 2 12 ]
+[v vfpfcnvrt@c c `uc  1 a 1 18 ]
+"1180
+[v vfpfcnvrt@done done `a  1 a 1 9 ]
+[s S1760 _IO_FILE 0 ]
+"1177
+[v vfpfcnvrt@fp fp `*.2S1760  1 p 2 0 ]
+[v vfpfcnvrt@fmt fmt `*.30*.25uc  1 p 1 2 ]
+[v vfpfcnvrt@ap ap `*.39*.4v  1 p 2 3 ]
+"1814
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 2 ]
+[u S1739 . 2 `*.2uc 1 buffer 2 0 `*.2DCuc 1 source 2 0 ]
+[s S1742 _IO_FILE 11 `S1739 1 . 2 0 `i 1 count 2 2 `[3]uc 1 ungetbuf 3 4 `i 1 ungetcnt 2 7 `i 1 limit 2 9 ]
+[v fputc@fp fp `*.2S1742  1 p 2 4 ]
+"24
+} 0
+"98 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@data data `uc  1 p 1 wreg ]
+[v putch@data data `uc  1 p 1 wreg ]
+[v putch@data data `uc  1 p 1 1 ]
+"101
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 0 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 2 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 4 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 6 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 0 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 2 ]
+"30
+} 0
+"88 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _UART_SendChar UART_SendChar `(v  1 e 1 0 ]
+{
+[v UART_SendChar@data data `uc  1 p 1 wreg ]
+[v UART_SendChar@data data `uc  1 p 1 wreg ]
+[v UART_SendChar@data data `uc  1 p 1 1 ]
+"91
+} 0
+"240 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_Write EUSART2_Write `(v  1 e 1 0 ]
+{
+[v EUSART2_Write@txData txData `uc  1 p 1 0 ]
+"243
+} 0
+"240 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_Write EUSART1_Write `(v  1 e 1 0 ]
+{
+[v EUSART1_Write@txData txData `uc  1 p 1 0 ]
+"243
+} 0
+"203 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_IsTxReady EUSART2_IsTxReady `(a  1 e 1 0 ]
+{
+"206
+} 0
+"203 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_IsTxReady EUSART1_IsTxReady `(a  1 e 1 0 ]
+{
+"206
+} 0
+"93 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _UART_ReceiveChar UART_ReceiveChar `(uc  1 e 1 0 ]
+{
+"96
+} 0
+"218 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_Read EUSART1_Read `(uc  1 e 1 0 ]
+{
+"238
+} 0
+"250
+[v _EUSART1_DefaultOverrunErrorCallback EUSART1_DefaultOverrunErrorCallback `(v  1 s 1 EUSART1_DefaultOverrunErrorCallback ]
+{
+"255
+} 0
+"250 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_DefaultOverrunErrorCallback EUSART2_DefaultOverrunErrorCallback `(v  1 s 1 EUSART2_DefaultOverrunErrorCallback ]
+{
+"255
+} 0
+"245 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_DefaultFramingErrorCallback EUSART1_DefaultFramingErrorCallback `(v  1 s 1 EUSART1_DefaultFramingErrorCallback ]
+{
+"248
+} 0
+"245 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_DefaultFramingErrorCallback EUSART2_DefaultFramingErrorCallback `(v  1 s 1 EUSART2_DefaultFramingErrorCallback ]
+{
+"248
+} 0
+"198 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_IsRxReady EUSART1_IsRxReady `(a  1 e 1 0 ]
+{
+"201
+} 0
+"81 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _UART2_SendString UART2_SendString `(v  1 e 1 0 ]
+{
+[v UART2_SendString@str str `*.25DCuc  1 p 2 2 ]
+"86
+} 0
+"75
+[v _UART2_SendChar UART2_SendChar `(v  1 e 1 0 ]
+{
+[v UART2_SendChar@data data `uc  1 p 1 wreg ]
+[v UART2_SendChar@data data `uc  1 p 1 wreg ]
+[v UART2_SendChar@data data `uc  1 p 1 1 ]
+"78
+} 0
+"39 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"47
+} 0
+"60 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"38 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"135
+} 0
+"40 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"48
+} 0
+"69
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"71
+} 0
+"99 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_Initialize EUSART2_Initialize `(v  1 e 1 0 ]
+{
+"118
+} 0
+"265
+[v _EUSART2_OverrunErrorCallbackRegister EUSART2_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v EUSART2_OverrunErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"271
+} 0
+"257
+[v _EUSART2_FramingErrorCallbackRegister EUSART2_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v EUSART2_FramingErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"263
+} 0
+"99 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart1.c
+[v _EUSART1_Initialize EUSART1_Initialize `(v  1 e 1 0 ]
+{
+"118
+} 0
+"265
+[v _EUSART1_OverrunErrorCallbackRegister EUSART1_OverrunErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v EUSART1_OverrunErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"271
+} 0
+"257
+[v _EUSART1_FramingErrorCallbackRegister EUSART1_FramingErrorCallbackRegister `(v  1 e 1 0 ]
+{
+[v EUSART1_FramingErrorCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"263
+} 0
+"39 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"55
+} 0
+"55 C:\projects\TemperatureHub\master\TempSensorHub.X\main.c
+[v _SPI_Write SPI_Write `(v  1 e 1 0 ]
+{
+"56
+[v SPI_Write@buffer buffer `[2]uc  1 a 2 8 ]
+"55
+[v SPI_Write@data data `us  1 p 2 6 ]
+"60
+} 0
+"107 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/spi/src/mssp1.c
+[v _SPI1_BufferExchange SPI1_BufferExchange `(v  1 e 1 0 ]
+{
+"110
+[v SPI1_BufferExchange@bufferInputSize bufferInputSize `ui  1 a 2 3 ]
+"109
+[v SPI1_BufferExchange@bufferInput bufferInput `*.4uc  1 a 1 5 ]
+"107
+[v SPI1_BufferExchange@bufferData bufferData `*.4v  1 p 1 0 ]
+[v SPI1_BufferExchange@bufferSize bufferSize `ui  1 p 2 1 ]
+"123
+} 0
+"81
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+"83
+[v SPI1_Open@returnValue returnValue `a  1 a 1 9 ]
+"81
+[v SPI1_Open@spiConfigIndex spiConfigIndex `uc  1 p 1 6 ]
+"100
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"141 C:\projects\TemperatureHub\master\TempSensorHub.X\mcc_generated_files/uart/src/eusart2.c
+[v _EUSART2_TransmitEnable EUSART2_TransmitEnable `(v  1 e 1 0 ]
+{
+"144
+} 0
+"129
+[v _EUSART2_Enable EUSART2_Enable `(v  1 e 1 0 ]
+{
+"133
+} 0
