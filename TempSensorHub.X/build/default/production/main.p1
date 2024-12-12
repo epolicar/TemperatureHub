@@ -1805,481 +1805,481 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 249:     if (PORTAbits.RA0) {
 [e $ ! != -> . . _PORTAbits 0 0 `i -> 0 `i 1068  ]
 {
-"252
-[; ;main.c: 252:         do { ANSELAbits.ANSA0 = 0; } while(0);
+"253
+[; ;main.c: 253:         do { ANSELAbits.ANSA0 = 0; } while(0);
 [e :U 1071 ]
 {
 [e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1070 ]
-"253
-[; ;main.c: 253:         do { ANSELBbits.ANSB4 = 0; } while(0);
+"254
+[; ;main.c: 254:         do { ANSELBbits.ANSB4 = 0; } while(0);
 [e :U 1074 ]
 {
 [e = . . _ANSELBbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 1073 ]
-"254
-[; ;main.c: 254:         do { ANSELBbits.ANSB5 = 0; } while(0);
+"255
+[; ;main.c: 255:         do { ANSELBbits.ANSB5 = 0; } while(0);
 [e :U 1077 ]
 {
 [e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1076 ]
-"255
-[; ;main.c: 255:         do { ANSELCbits.ANSC6 = 0; } while(0);
+"256
+[; ;main.c: 256:         do { ANSELCbits.ANSC6 = 0; } while(0);
 [e :U 1080 ]
 {
 [e = . . _ANSELCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 1079 ]
-"256
-[; ;main.c: 256:         do { ANSELCbits.ANSC7 = 0; } while(0);
+"257
+[; ;main.c: 257:         do { ANSELCbits.ANSC7 = 0; } while(0);
 [e :U 1083 ]
 {
 [e = . . _ANSELCbits 0 7 -> -> 0 `i `uc ]
 }
 [e :U 1082 ]
-"257
-[; ;main.c: 257:         do { ANSELDbits.ANSD0 = 0; } while(0);
+"258
+[; ;main.c: 258:         do { ANSELDbits.ANSD0 = 0; } while(0);
 [e :U 1086 ]
 {
 [e = . . _ANSELDbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1085 ]
-"258
-[; ;main.c: 258:         do { ANSELDbits.ANSD1 = 0; } while(0);
+"259
+[; ;main.c: 259:         do { ANSELDbits.ANSD1 = 0; } while(0);
 [e :U 1089 ]
 {
 [e = . . _ANSELDbits 0 1 -> -> 0 `i `uc ]
 }
 [e :U 1088 ]
-"259
-[; ;main.c: 259:         do { ANSELDbits.ANSD5 = 0; } while(0);
+"260
+[; ;main.c: 260:         do { ANSELDbits.ANSD5 = 0; } while(0);
 [e :U 1092 ]
 {
 [e = . . _ANSELDbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1091 ]
-"261
-[; ;main.c: 261:         do { TRISAbits.TRISA0 = 1; } while(0);
+"262
+[; ;main.c: 262:         do { TRISAbits.TRISA0 = 1; } while(0);
 [e :U 1095 ]
 {
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 1094 ]
-"262
-[; ;main.c: 262:         do { TRISBbits.TRISB4 = 1; } while(0);
+"263
+[; ;main.c: 263:         do { TRISBbits.TRISB4 = 1; } while(0);
 [e :U 1098 ]
 {
 [e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
 }
 [e :U 1097 ]
-"263
-[; ;main.c: 263:         do { TRISBbits.TRISB5 = 0; } while(0);
+"264
+[; ;main.c: 264:         do { TRISBbits.TRISB5 = 0; } while(0);
 [e :U 1101 ]
 {
 [e = . . _TRISBbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1100 ]
-"264
-[; ;main.c: 264:         do { TRISCbits.TRISC6 = 0; } while(0);
+"265
+[; ;main.c: 265:         do { TRISCbits.TRISC6 = 0; } while(0);
 [e :U 1104 ]
 {
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 1103 ]
-"265
-[; ;main.c: 265:         do { TRISCbits.TRISC7 = 1; } while(0);
+"266
+[; ;main.c: 266:         do { TRISCbits.TRISC7 = 1; } while(0);
 [e :U 1107 ]
 {
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
 }
 [e :U 1106 ]
-"266
-[; ;main.c: 266:         do { TRISDbits.TRISD0 = 0; } while(0);
+"267
+[; ;main.c: 267:         do { TRISDbits.TRISD0 = 0; } while(0);
 [e :U 1110 ]
 {
 [e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1109 ]
-"267
-[; ;main.c: 267:         do { TRISDbits.TRISD1 = 1; } while(0);
+"268
+[; ;main.c: 268:         do { TRISDbits.TRISD1 = 1; } while(0);
 [e :U 1113 ]
 {
 [e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 1112 ]
-"268
-[; ;main.c: 268:         do { TRISDbits.TRISD5 = 0; } while(0);
+"269
+[; ;main.c: 269:         do { TRISDbits.TRISD5 = 0; } while(0);
 [e :U 1116 ]
 {
 [e = . . _TRISDbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1115 ]
-"270
-[; ;main.c: 270:         SPI1_OpenMaster();
+"271
+[; ;main.c: 271:         SPI1_OpenMaster();
 [e ( _SPI1_OpenMaster ..  ]
-"272
-[; ;main.c: 272:         test1(1);
-[e ( _test1 (1 -> 1 `i ]
 "273
-[; ;main.c: 273:         UART2_SendString("Mode: master\n\r");
-[e ( _UART2_SendString (1 :s 3C ]
+[; ;main.c: 273:         test1(1);
+[e ( _test1 (1 -> 1 `i ]
 "274
-[; ;main.c: 274:         uint16_t temperature;
+[; ;main.c: 274:         UART2_SendString("Mode: master\n\r");
+[e ( _UART2_SendString (1 :s 3C ]
+"275
+[; ;main.c: 275:         uint16_t temperature;
 [v _temperature `us ~T0 @X0 1 a ]
-"276
-[; ;main.c: 276:         while (1) {
+"277
+[; ;main.c: 277:         while (1) {
 [e :U 1118 ]
 {
-"277
-[; ;main.c: 277:             do { LATDbits.LATD5 = 0; } while(0);
+"278
+[; ;main.c: 278:             do { LATDbits.LATD5 = 0; } while(0);
 [e :U 1122 ]
 {
 [e = . . _LATDbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1121 ]
-"278
-[; ;main.c: 278:             temperature = read_temperature();
-[e = _temperature ( _read_temperature ..  ]
 "279
-[; ;main.c: 279:             do { LATDbits.LATD5 = 1; } while(0);
+[; ;main.c: 279:             temperature = read_temperature();
+[e = _temperature ( _read_temperature ..  ]
+"280
+[; ;main.c: 280:             do { LATDbits.LATD5 = 1; } while(0);
 [e :U 1125 ]
 {
 [e = . . _LATDbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 1124 ]
-"280
-[; ;main.c: 280:             UART_SendChar((temperature >> 8) & 0xFF);
-[e ( _UART_SendChar (1 -> & >> -> _temperature `ui -> 8 `i -> -> 255 `i `ui `uc ]
 "281
-[; ;main.c: 281:             UART_SendChar(temperature & 0xFF);
+[; ;main.c: 281:             UART_SendChar((temperature >> 8) & 0xFF);
+[e ( _UART_SendChar (1 -> & >> -> _temperature `ui -> 8 `i -> -> 255 `i `ui `uc ]
+"282
+[; ;main.c: 282:             UART_SendChar(temperature & 0xFF);
 [e ( _UART_SendChar (1 -> & -> _temperature `ui -> -> 255 `i `ui `uc ]
-"283
-[; ;main.c: 283:             temperature = temperature >> 7;
-[e = _temperature -> >> -> _temperature `ui -> 7 `i `us ]
 "284
-[; ;main.c: 284:             printf("Temperature: %u\n\r", temperature);
-[e ( _printf , (. :s 4C -> _temperature `ui ]
+[; ;main.c: 284:             temperature = temperature >> 7;
+[e = _temperature -> >> -> _temperature `ui -> 7 `i `us ]
 "285
-[; ;main.c: 285:             _delay((unsigned long)((100)*(12000000U/4000.0)));
+[; ;main.c: 285:             printf("Temperature: %u\n\r", temperature);
+[e ( _printf , (. :s 4C -> _temperature `ui ]
+"286
+[; ;main.c: 286:             _delay((unsigned long)((100)*(12000000U/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 12000000 `ul `d .4000.0 `ul ]
-"287
-[; ;main.c: 287:             _delay((unsigned long)((50)*(12000000U/4000.0)));
-[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 12000000 `ul `d .4000.0 `ul ]
 "288
-[; ;main.c: 288:         }
+[; ;main.c: 288:             _delay((unsigned long)((50)*(12000000U/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 12000000 `ul `d .4000.0 `ul ]
+"289
+[; ;main.c: 289:         }
 }
 [e :U 1117 ]
 [e $U 1118  ]
 [e :U 1119 ]
-"289
-[; ;main.c: 289:     } else {
+"290
+[; ;main.c: 290:     } else {
 }
 [e $U 1126  ]
 [e :U 1068 ]
 {
-"291
-[; ;main.c: 291:         do { ANSELAbits.ANSA0 = 0; } while(0);
+"293
+[; ;main.c: 293:         do { ANSELAbits.ANSA0 = 0; } while(0);
 [e :U 1129 ]
 {
 [e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1128 ]
-"292
-[; ;main.c: 292:         do { ANSELBbits.ANSB4 = 0; } while(0);
+"294
+[; ;main.c: 294:         do { ANSELBbits.ANSB4 = 0; } while(0);
 [e :U 1132 ]
 {
 [e = . . _ANSELBbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 1131 ]
-"293
-[; ;main.c: 293:         do { ANSELBbits.ANSB5 = 0; } while(0);
+"295
+[; ;main.c: 295:         do { ANSELBbits.ANSB5 = 0; } while(0);
 [e :U 1135 ]
 {
 [e = . . _ANSELBbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1134 ]
-"294
-[; ;main.c: 294:         do { ANSELCbits.ANSC6 = 0; } while(0);
+"296
+[; ;main.c: 296:         do { ANSELCbits.ANSC6 = 0; } while(0);
 [e :U 1138 ]
 {
 [e = . . _ANSELCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 1137 ]
-"295
-[; ;main.c: 295:         do { ANSELCbits.ANSC7 = 0; } while(0);
+"297
+[; ;main.c: 297:         do { ANSELCbits.ANSC7 = 0; } while(0);
 [e :U 1141 ]
 {
 [e = . . _ANSELCbits 0 7 -> -> 0 `i `uc ]
 }
 [e :U 1140 ]
-"296
-[; ;main.c: 296:         do { ANSELDbits.ANSD0 = 0; } while(0);
+"298
+[; ;main.c: 298:         do { ANSELDbits.ANSD0 = 0; } while(0);
 [e :U 1144 ]
 {
 [e = . . _ANSELDbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1143 ]
-"297
-[; ;main.c: 297:         do { ANSELDbits.ANSD1 = 0; } while(0);
+"299
+[; ;main.c: 299:         do { ANSELDbits.ANSD1 = 0; } while(0);
 [e :U 1147 ]
 {
 [e = . . _ANSELDbits 0 1 -> -> 0 `i `uc ]
 }
 [e :U 1146 ]
-"298
-[; ;main.c: 298:         do { ANSELDbits.ANSD5 = 0; } while(0);
+"300
+[; ;main.c: 300:         do { ANSELDbits.ANSD5 = 0; } while(0);
 [e :U 1150 ]
 {
 [e = . . _ANSELDbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 1149 ]
-"300
-[; ;main.c: 300:         do { TRISAbits.TRISA0 = 1; } while(0);
+"302
+[; ;main.c: 302:         do { TRISAbits.TRISA0 = 1; } while(0);
 [e :U 1153 ]
 {
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 }
 [e :U 1152 ]
-"301
-[; ;main.c: 301:         do { TRISBbits.TRISB4 = 0; } while(0);
+"303
+[; ;main.c: 303:         do { TRISBbits.TRISB4 = 0; } while(0);
 [e :U 1156 ]
 {
 [e = . . _TRISBbits 0 4 -> -> 0 `i `uc ]
 }
 [e :U 1155 ]
-"302
-[; ;main.c: 302:         do { TRISBbits.TRISB5 = 1; } while(0);
+"304
+[; ;main.c: 304:         do { TRISBbits.TRISB5 = 1; } while(0);
 [e :U 1159 ]
 {
 [e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 1158 ]
-"303
-[; ;main.c: 303:         do { TRISCbits.TRISC6 = 0; } while(0);
+"305
+[; ;main.c: 305:         do { TRISCbits.TRISC6 = 0; } while(0);
 [e :U 1162 ]
 {
 [e = . . _TRISCbits 0 6 -> -> 0 `i `uc ]
 }
 [e :U 1161 ]
-"304
-[; ;main.c: 304:         do { TRISCbits.TRISC7 = 1; } while(0);
+"306
+[; ;main.c: 306:         do { TRISCbits.TRISC7 = 1; } while(0);
 [e :U 1165 ]
 {
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
 }
 [e :U 1164 ]
-"305
-[; ;main.c: 305:         do { TRISDbits.TRISD0 = 0; } while(0);
+"307
+[; ;main.c: 307:         do { TRISDbits.TRISD0 = 0; } while(0);
 [e :U 1168 ]
 {
 [e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
 }
 [e :U 1167 ]
-"306
-[; ;main.c: 306:         do { TRISDbits.TRISD1 = 1; } while(0);
+"308
+[; ;main.c: 308:         do { TRISDbits.TRISD1 = 1; } while(0);
 [e :U 1171 ]
 {
 [e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
 }
 [e :U 1170 ]
-"307
-[; ;main.c: 307:         do { TRISDbits.TRISD5 = 1; } while(0);
+"309
+[; ;main.c: 309:         do { TRISDbits.TRISD5 = 1; } while(0);
 [e :U 1174 ]
 {
 [e = . . _TRISDbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 1173 ]
-"309
-[; ;main.c: 309:         SPI1_OpenSlave();
-[e ( _SPI1_OpenSlave ..  ]
 "311
-[; ;main.c: 311:         UART2_SendString("Mode: slave\n\r");
+[; ;main.c: 311:         SPI1_OpenSlave();
+[e ( _SPI1_OpenSlave ..  ]
+"313
+[; ;main.c: 313:         UART2_SendString("Mode: slave\n\r");
 [e ( _UART2_SendString (1 :s 5C ]
-"314
-[; ;main.c: 314:         TRISBbits.TRISB5 = 1;
+"316
+[; ;main.c: 316:         TRISBbits.TRISB5 = 1;
 [e = . . _TRISBbits 0 5 -> -> 1 `i `uc ]
-"315
-[; ;main.c: 315:         _Bool detect_high_cs = 0;
+"317
+[; ;main.c: 317:         _Bool detect_high_cs = 0;
 [v _detect_high_cs `a ~T0 @X0 1 a ]
 [e = _detect_high_cs -> -> 0 `i `a ]
-"316
-[; ;main.c: 316:         UART2_SendString("enabling usart1\n\r");
-[e ( _UART2_SendString (1 :s 6C ]
-"317
-[; ;main.c: 317:         EUSART1_Enable();
-[e ( _EUSART1_Enable ..  ]
 "318
-[; ;main.c: 318:         EUSART1_ReceiveEnable();
-[e ( _EUSART1_ReceiveEnable ..  ]
+[; ;main.c: 318:         UART2_SendString("enabling usart1\n\r");
+[e ( _UART2_SendString (1 :s 6C ]
 "319
-[; ;main.c: 319:         EUSART1_TransmitEnable();
-[e ( _EUSART1_TransmitEnable ..  ]
+[; ;main.c: 319:         EUSART1_Enable();
+[e ( _EUSART1_Enable ..  ]
 "320
-[; ;main.c: 320:         UART2_SendString("registering handler\n\r");
-[e ( _UART2_SendString (1 :s 7C ]
+[; ;main.c: 320:         EUSART1_ReceiveEnable();
+[e ( _EUSART1_ReceiveEnable ..  ]
 "321
-[; ;main.c: 321:         EUSART1_RxCompleteCallbackRegister(&uart1_handler);
+[; ;main.c: 321:         EUSART1_TransmitEnable();
+[e ( _EUSART1_TransmitEnable ..  ]
+"322
+[; ;main.c: 322:         UART2_SendString("registering handler\n\r");
+[e ( _UART2_SendString (1 :s 7C ]
+"323
+[; ;main.c: 323:         EUSART1_RxCompleteCallbackRegister(&uart1_handler);
 [e ( _EUSART1_RxCompleteCallbackRegister (1 &U _uart1_handler ]
-"324
-[; ;main.c: 324:         (INTCONbits.GIE = 1);
+"326
+[; ;main.c: 326:         (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"325
-[; ;main.c: 325:         (INTCONbits.PEIE = 1);
+"327
+[; ;main.c: 327:         (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"328
-[; ;main.c: 328:         UART2_SendString("entering loop\n\r");
-[e ( _UART2_SendString (1 :s 8C ]
-"329
-[; ;main.c: 329:         uint16_t data_temp;
-[v _data_temp `us ~T0 @X0 1 a ]
 "330
-[; ;main.c: 330:         uint16_t data_spi = 0x1234;
+[; ;main.c: 330:         UART2_SendString("entering loop\n\r");
+[e ( _UART2_SendString (1 :s 8C ]
+"331
+[; ;main.c: 331:         uint16_t data_temp;
+[v _data_temp `us ~T0 @X0 1 a ]
+"332
+[; ;main.c: 332:         uint16_t data_spi = 0x1234;
 [v _data_spi `us ~T0 @X0 1 a ]
 [e = _data_spi -> -> 4660 `i `us ]
-"331
-[; ;main.c: 331:         while (1) {
+"333
+[; ;main.c: 333:         while (1) {
 [e :U 1176 ]
 {
-"332
-[; ;main.c: 332:             start_label:
+"334
+[; ;main.c: 334:             start_label:
 [e :U 1178 ]
-"333
-[; ;main.c: 333:             if (buffer_read(&dataBuffer, &data_temp)) {
+"335
+[; ;main.c: 335:             if (buffer_read(&dataBuffer, &data_temp)) {
 [e $ ! != -> ( _buffer_read (2 , &U _dataBuffer &U _data_temp `i -> 0 `i 1179  ]
 {
-"334
-[; ;main.c: 334:                 data_spi = data_temp;
-[e = _data_spi _data_temp ]
-"335
-[; ;main.c: 335:                 printf("%x\r\n", data_spi);
-[e ( _printf , (. :s 9C -> _data_spi `ui ]
 "336
-[; ;main.c: 336:             }
+[; ;main.c: 336:                 data_spi = data_temp;
+[e = _data_spi _data_temp ]
+"337
+[; ;main.c: 337:                 printf("%x\r\n", data_spi);
+[e ( _printf , (. :s 9C -> _data_spi `ui ]
+"338
+[; ;main.c: 338:             }
 }
 [e :U 1179 ]
-"339
-[; ;main.c: 339:    SSP1BUF = data_spi >> 8;
-[e = _SSP1BUF -> >> -> _data_spi `ui -> 8 `i `uc ]
-"340
-[; ;main.c: 340:             data_ptr = 1;
-[e = _data_ptr -> -> 1 `i `uc ]
 "341
-[; ;main.c: 341:             while (!PIR3bits.SSP1IF)
+[; ;main.c: 341:    SSP1BUF = data_spi >> 8;
+[e = _SSP1BUF -> >> -> _data_spi `ui -> 8 `i `uc ]
+"342
+[; ;main.c: 342:             data_ptr = 1;
+[e = _data_ptr -> -> 1 `i `uc ]
+"343
+[; ;main.c: 343:             while (!PIR3bits.SSP1IF)
 [e $U 1180  ]
 [e :U 1181 ]
-"342
-[; ;main.c: 342:             {
-{
 "344
-[; ;main.c: 344:                 if(!PORTDbits.RD5){
+[; ;main.c: 344:             {
+{
+"346
+[; ;main.c: 346:                 if(!PORTDbits.RD5){
 [e $ ! ! != -> . . _PORTDbits 0 5 `i -> 0 `i 1183  ]
 {
-"345
-[; ;main.c: 345:                     detect_high_cs = 1;
+"347
+[; ;main.c: 347:                     detect_high_cs = 1;
 [e = _detect_high_cs -> -> 1 `i `a ]
-"346
-[; ;main.c: 346:                 } else {
+"348
+[; ;main.c: 348:                 } else {
 }
 [e $U 1184  ]
 [e :U 1183 ]
 {
-"348
-[; ;main.c: 348:                     goto start_label;
+"350
+[; ;main.c: 350:                     goto start_label;
 [e $U 1178  ]
-"349
-[; ;main.c: 349:                 }
+"351
+[; ;main.c: 351:                 }
 }
 [e :U 1184 ]
-"351
-[; ;main.c: 351:                 if (detect_high_cs){
+"353
+[; ;main.c: 353:                 if (detect_high_cs){
 [e $ ! != -> _detect_high_cs `i -> 0 `i 1185  ]
 {
-"352
-[; ;main.c: 352:                     if(PORTDbits.RD5){
+"354
+[; ;main.c: 354:                     if(PORTDbits.RD5){
 [e $ ! != -> . . _PORTDbits 0 5 `i -> 0 `i 1186  ]
 {
-"353
-[; ;main.c: 353:                         data_ptr = 0;
-[e = _data_ptr -> -> 0 `i `uc ]
-"354
-[; ;main.c: 354:                         break;
-[e $U 1182  ]
 "355
-[; ;main.c: 355:                     }
+[; ;main.c: 355:                         data_ptr = 0;
+[e = _data_ptr -> -> 0 `i `uc ]
+"356
+[; ;main.c: 356:                         break;
+[e $U 1182  ]
+"357
+[; ;main.c: 357:                     }
 }
 [e :U 1186 ]
-"356
-[; ;main.c: 356:                 }
+"358
+[; ;main.c: 358:                 }
 }
 [e :U 1185 ]
-"358
-[; ;main.c: 358:             }
+"360
+[; ;main.c: 360:             }
 }
 [e :U 1180 ]
-"341
-[; ;main.c: 341:             while (!PIR3bits.SSP1IF)
+"343
+[; ;main.c: 343:             while (!PIR3bits.SSP1IF)
 [e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1181  ]
 [e :U 1182 ]
-"360
-[; ;main.c: 360:             if(data_ptr)
-[e $ ! != -> _data_ptr `i -> 0 `i 1187  ]
-"361
-[; ;main.c: 361:             {
-{
 "362
-[; ;main.c: 362:                 PIR3bits.SSP1IF = 0;
-[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 362:             if(data_ptr)
+[e $ ! != -> _data_ptr `i -> 0 `i 1187  ]
 "363
-[; ;main.c: 363:                 SSP1BUF = data_spi & 0xFF;
-[e = _SSP1BUF -> & -> _data_spi `ui -> -> 255 `i `ui `uc ]
+[; ;main.c: 363:             {
+{
 "364
-[; ;main.c: 364:             }
+[; ;main.c: 364:                 PIR3bits.SSP1IF = 0;
+[e = . . _PIR3bits 0 0 -> -> 0 `i `uc ]
+"365
+[; ;main.c: 365:                 SSP1BUF = data_spi & 0xFF;
+[e = _SSP1BUF -> & -> _data_spi `ui -> -> 255 `i `ui `uc ]
+"366
+[; ;main.c: 366:             }
 }
 [e :U 1187 ]
-"365
-[; ;main.c: 365:             while (!PIR3bits.SSP1IF)
+"367
+[; ;main.c: 367:             while (!PIR3bits.SSP1IF)
 [e $U 1188  ]
 [e :U 1189 ]
-"366
-[; ;main.c: 366:             {
-{
 "368
-[; ;main.c: 368:                 if(PORTDbits.RD5){
+[; ;main.c: 368:             {
+{
+"370
+[; ;main.c: 370:                 if(PORTDbits.RD5){
 [e $ ! != -> . . _PORTDbits 0 5 `i -> 0 `i 1191  ]
 {
-"369
-[; ;main.c: 369:                     data_ptr = 0;
-[e = _data_ptr -> -> 0 `i `uc ]
-"370
-[; ;main.c: 370:                     break;
-[e $U 1190  ]
 "371
-[; ;main.c: 371:                 }
+[; ;main.c: 371:                     data_ptr = 0;
+[e = _data_ptr -> -> 0 `i `uc ]
+"372
+[; ;main.c: 372:                     break;
+[e $U 1190  ]
+"373
+[; ;main.c: 373:                 }
 }
 [e :U 1191 ]
-"372
-[; ;main.c: 372:             }
+"374
+[; ;main.c: 374:             }
 }
 [e :U 1188 ]
-"365
-[; ;main.c: 365:             while (!PIR3bits.SSP1IF)
+"367
+[; ;main.c: 367:             while (!PIR3bits.SSP1IF)
 [e $ ! != -> . . _PIR3bits 0 0 `i -> 0 `i 1189  ]
 [e :U 1190 ]
-"373
-[; ;main.c: 373:         }
+"375
+[; ;main.c: 375:         }
 }
 [e :U 1175 ]
 [e $U 1176  ]
 [e :U 1177 ]
-"374
-[; ;main.c: 374:     }
+"376
+[; ;main.c: 376:     }
 }
 [e :U 1126 ]
-"375
-[; ;main.c: 375: }
+"377
+[; ;main.c: 377: }
 [e :UE 1067 ]
 }
 [p f _printf 12846080 ]

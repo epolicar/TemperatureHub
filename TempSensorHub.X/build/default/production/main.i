@@ -14323,6 +14323,7 @@ void main(void) {
     if (PORTAbits.RA0) {
 
 
+
         do { ANSELAbits.ANSA0 = 0; } while(0);
         do { ANSELBbits.ANSB4 = 0; } while(0);
         do { ANSELBbits.ANSB5 = 0; } while(0);
@@ -14361,6 +14362,7 @@ void main(void) {
             _delay((unsigned long)((50)*(12000000U/4000.0)));
         }
     } else {
+
 
         do { ANSELAbits.ANSA0 = 0; } while(0);
         do { ANSELBbits.ANSB4 = 0; } while(0);

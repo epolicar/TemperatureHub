@@ -681,13 +681,13 @@
 "202 C:\projects\TemperatureHub\TempSensorHub.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"330
+"332
 [v main@data_spi data_spi `us  1 a 2 2 ]
-"329
+"331
 [v main@data_temp data_temp `us  1 a 2 0 ]
-"274
+"275
 [v main@temperature temperature `us  1 a 2 4 ]
-"375
+"377
 } 0
 "120
 [v _test1 test1 `(v  1 e 1 0 ]

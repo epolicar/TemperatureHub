@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.50 build 20240725155939 
-                                                                                               Thu Dec 12 16:27:50 2024
+                                                                                               Thu Dec 12 16:48:49 2024
 
 Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1 
      1                           	processor	16F15376
@@ -4843,78 +4843,78 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   4824     022C  2AA4               	goto	l941
   4825     022D                     u2910:
   4826     022D                     l901:	
-  4827                           ;main.c: 252:         do { ANSELAbits.ANSA0 = 0; } while(0);
+  4827                           ;main.c: 253:         do { ANSELAbits.ANSA0 = 0; } while(0);
   4828                           
   4829     022D  017E               	movlb	62	; select bank62
   4830     022E  1038               	bcf	56,0	;volatile
   4831     022F                     l903:	
-  4832                           ;main.c: 253:         do { ANSELBbits.ANSB4 = 0; } while(0);
+  4832                           ;main.c: 254:         do { ANSELBbits.ANSB4 = 0; } while(0);
   4833                           
   4834     022F  1243               	bcf	67,4	;volatile
   4835     0230                     l905:	
-  4836                           ;main.c: 254:         do { ANSELBbits.ANSB5 = 0; } while(0);
+  4836                           ;main.c: 255:         do { ANSELBbits.ANSB5 = 0; } while(0);
   4837                           
   4838     0230  12C3               	bcf	67,5	;volatile
   4839     0231                     l907:	
-  4840                           ;main.c: 255:         do { ANSELCbits.ANSC6 = 0; } while(0);
+  4840                           ;main.c: 256:         do { ANSELCbits.ANSC6 = 0; } while(0);
   4841                           
   4842     0231  134E               	bcf	78,6	;volatile
   4843     0232                     l909:	
-  4844                           ;main.c: 256:         do { ANSELCbits.ANSC7 = 0; } while(0);
+  4844                           ;main.c: 257:         do { ANSELCbits.ANSC7 = 0; } while(0);
   4845                           
   4846     0232  13CE               	bcf	78,7	;volatile
   4847     0233                     l911:	
-  4848                           ;main.c: 257:         do { ANSELDbits.ANSD0 = 0; } while(0);
+  4848                           ;main.c: 258:         do { ANSELDbits.ANSD0 = 0; } while(0);
   4849                           
   4850     0233  1059               	bcf	89,0	;volatile
   4851     0234                     l913:	
-  4852                           ;main.c: 258:         do { ANSELDbits.ANSD1 = 0; } while(0);
+  4852                           ;main.c: 259:         do { ANSELDbits.ANSD1 = 0; } while(0);
   4853                           
   4854     0234  10D9               	bcf	89,1	;volatile
   4855     0235                     l915:	
-  4856                           ;main.c: 259:         do { ANSELDbits.ANSD5 = 0; } while(0);
+  4856                           ;main.c: 260:         do { ANSELDbits.ANSD5 = 0; } while(0);
   4857                           
   4858     0235  12D9               	bcf	89,5	;volatile
   4859     0236                     l917:	
-  4860                           ;main.c: 261:         do { TRISAbits.TRISA0 = 1; } while(0);
+  4860                           ;main.c: 262:         do { TRISAbits.TRISA0 = 1; } while(0);
   4861                           
   4862     0236  0140               	movlb	0	; select bank0
   4863     0237  1412               	bsf	18,0	;volatile
   4864     0238                     l919:	
-  4865                           ;main.c: 262:         do { TRISBbits.TRISB4 = 1; } while(0);
+  4865                           ;main.c: 263:         do { TRISBbits.TRISB4 = 1; } while(0);
   4866                           
   4867     0238  1613               	bsf	19,4	;volatile
   4868     0239                     l921:	
-  4869                           ;main.c: 263:         do { TRISBbits.TRISB5 = 0; } while(0);
+  4869                           ;main.c: 264:         do { TRISBbits.TRISB5 = 0; } while(0);
   4870                           
   4871     0239  1293               	bcf	19,5	;volatile
   4872     023A                     l923:	
-  4873                           ;main.c: 264:         do { TRISCbits.TRISC6 = 0; } while(0);
+  4873                           ;main.c: 265:         do { TRISCbits.TRISC6 = 0; } while(0);
   4874                           
   4875     023A  1314               	bcf	20,6	;volatile
   4876     023B                     l925:	
-  4877                           ;main.c: 265:         do { TRISCbits.TRISC7 = 1; } while(0);
+  4877                           ;main.c: 266:         do { TRISCbits.TRISC7 = 1; } while(0);
   4878                           
   4879     023B  1794               	bsf	20,7	;volatile
   4880     023C                     l927:	
-  4881                           ;main.c: 266:         do { TRISDbits.TRISD0 = 0; } while(0);
+  4881                           ;main.c: 267:         do { TRISDbits.TRISD0 = 0; } while(0);
   4882                           
   4883     023C  1015               	bcf	21,0	;volatile
   4884     023D                     l929:	
-  4885                           ;main.c: 267:         do { TRISDbits.TRISD1 = 1; } while(0);
+  4885                           ;main.c: 268:         do { TRISDbits.TRISD1 = 1; } while(0);
   4886                           
   4887     023D  1495               	bsf	21,1	;volatile
   4888     023E                     l931:	
-  4889                           ;main.c: 268:         do { TRISDbits.TRISD5 = 0; } while(0);
+  4889                           ;main.c: 269:         do { TRISDbits.TRISD5 = 0; } while(0);
   4890                           
   4891     023E  1295               	bcf	21,5	;volatile
   4892     023F                     l3930:
   4893                           
-  4894                           ;main.c: 270:         SPI1_OpenMaster();
+  4894                           ;main.c: 271:         SPI1_OpenMaster();
   4895     023F  318E  26EE  3182   	fcall	_SPI1_OpenMaster
   4896     0242                     l3932:
   4897                           
-  4898                           ;main.c: 272:         test1(1);
+  4898                           ;main.c: 273:         test1(1);
   4899     0242  3001               	movlw	1
   4900     0243  0140               	movlb	0	; select bank0
   4901     0244  00A2               	movwf	test1@loop
@@ -4923,7 +4923,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   4904     0247  3185  25CE  3182   	fcall	_test1
   4905     024A                     l3934:
   4906                           
-  4907                           ;main.c: 273:         UART2_SendString("Mode: master\n\r");
+  4907                           ;main.c: 274:         UART2_SendString("Mode: master\n\r");
   4908     024A  304A               	movlw	low (STR_3| (0+32768))
   4909     024B  0140               	movlb	0	; select bank0
   4910     024C  00A4               	movwf	UART2_SendString@str
@@ -4935,7 +4935,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   4916     0253  129B               	bcf	27,5	;volatile
   4917     0254                     l3938:
   4918                           
-  4919                           ;main.c: 278:             temperature = read_temperature();
+  4919                           ;main.c: 279:             temperature = read_temperature();
   4920     0254  318E  26DB  3182   	fcall	_read_temperature
   4921     0257  0140               	movlb	0	; select bank0
   4922     0258  085C               	movf	?_read_temperature+1,w
@@ -4950,19 +4950,19 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   4931     0260  169B               	bsf	27,5	;volatile
   4932     0261                     l3942:
   4933                           
-  4934                           ;main.c: 280:             UART_SendChar((temperature >> 8) & 0xFF);
+  4934                           ;main.c: 281:             UART_SendChar((temperature >> 8) & 0xFF);
   4935     0261  0141               	movlb	1	; select bank1
   4936     0262  086A               	movf	(main@temperature+1)^(0+128),w
   4937     0263  318F  279D  3182   	fcall	_UART_SendChar
   4938     0266                     l3944:
   4939                           
-  4940                           ;main.c: 281:             UART_SendChar(temperature & 0xFF);
+  4940                           ;main.c: 282:             UART_SendChar(temperature & 0xFF);
   4941     0266  0141               	movlb	1	; select bank1
   4942     0267  0869               	movf	main@temperature^(0+128),w
   4943     0268  318F  279D  3182   	fcall	_UART_SendChar
   4944     026B                     l3946:
   4945                           
-  4946                           ;main.c: 283:             temperature = temperature >> 7;
+  4946                           ;main.c: 284:             temperature = temperature >> 7;
   4947     026B  0141               	movlb	1	; select bank1
   4948     026C  086A               	movf	(main@temperature+1)^(0+128),w
   4949     026D  0140               	movlb	0	; select bank0
@@ -4986,7 +4986,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   4967     027E  00EA               	movwf	(main@temperature+1)^(0+128)
   4968     027F                     l3948:
   4969                           
-  4970                           ;main.c: 284:             printf("Temperature: %u\n\r", temperature);
+  4970                           ;main.c: 285:             printf("Temperature: %u\n\r", temperature);
   4971     027F  3028               	movlw	low (STR_4| (0+32768))
   4972     0280  0140               	movlb	0	; select bank0
   4973     0281  00C9               	movwf	printf@fmt
@@ -5003,7 +5003,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   4984     028C  318F  277C  3182   	fcall	_printf
   4985     028F                     l3950:
   4986                           
-  4987                           ;main.c: 285:             _delay((unsigned long)((100)*(12000000U/4000.0)));
+  4987                           ;main.c: 286:             _delay((unsigned long)((100)*(12000000U/4000.0)));
   4988     028F  3002               	movlw	2
   4989     0290  0140               	movlb	0	; select bank0
   4990     0291  00DE               	movwf	??_main+1
@@ -5019,7 +5019,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5000     029A  2A95               	goto	u3007
   5001     029B                     l3952:
   5002                           
-  5003                           ;main.c: 287:             _delay((unsigned long)((50)*(12000000U/4000.0)));
+  5003                           ;main.c: 288:             _delay((unsigned long)((50)*(12000000U/4000.0)));
   5004     029B  30C3               	movlw	195
   5005     029C  0140               	movlb	0	; select bank0
   5006     029D  00DD               	movwf	??_main
@@ -5031,77 +5031,77 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5012     02A2  2A9F               	goto	u3017
   5013     02A3  2A52               	goto	l3936
   5014     02A4                     l941:	
-  5015                           ;main.c: 291:         do { ANSELAbits.ANSA0 = 0; } while(0);
+  5015                           ;main.c: 293:         do { ANSELAbits.ANSA0 = 0; } while(0);
   5016                           
   5017     02A4  017E               	movlb	62	; select bank62
   5018     02A5  1038               	bcf	56,0	;volatile
   5019     02A6                     l943:	
-  5020                           ;main.c: 292:         do { ANSELBbits.ANSB4 = 0; } while(0);
+  5020                           ;main.c: 294:         do { ANSELBbits.ANSB4 = 0; } while(0);
   5021                           
   5022     02A6  1243               	bcf	67,4	;volatile
   5023     02A7                     l945:	
-  5024                           ;main.c: 293:         do { ANSELBbits.ANSB5 = 0; } while(0);
+  5024                           ;main.c: 295:         do { ANSELBbits.ANSB5 = 0; } while(0);
   5025                           
   5026     02A7  12C3               	bcf	67,5	;volatile
   5027     02A8                     l947:	
-  5028                           ;main.c: 294:         do { ANSELCbits.ANSC6 = 0; } while(0);
+  5028                           ;main.c: 296:         do { ANSELCbits.ANSC6 = 0; } while(0);
   5029                           
   5030     02A8  134E               	bcf	78,6	;volatile
   5031     02A9                     l949:	
-  5032                           ;main.c: 295:         do { ANSELCbits.ANSC7 = 0; } while(0);
+  5032                           ;main.c: 297:         do { ANSELCbits.ANSC7 = 0; } while(0);
   5033                           
   5034     02A9  13CE               	bcf	78,7	;volatile
   5035     02AA                     l951:	
-  5036                           ;main.c: 296:         do { ANSELDbits.ANSD0 = 0; } while(0);
+  5036                           ;main.c: 298:         do { ANSELDbits.ANSD0 = 0; } while(0);
   5037                           
   5038     02AA  1059               	bcf	89,0	;volatile
   5039     02AB                     l953:	
-  5040                           ;main.c: 297:         do { ANSELDbits.ANSD1 = 0; } while(0);
+  5040                           ;main.c: 299:         do { ANSELDbits.ANSD1 = 0; } while(0);
   5041                           
   5042     02AB  10D9               	bcf	89,1	;volatile
   5043     02AC                     l955:	
-  5044                           ;main.c: 298:         do { ANSELDbits.ANSD5 = 0; } while(0);
+  5044                           ;main.c: 300:         do { ANSELDbits.ANSD5 = 0; } while(0);
   5045                           
   5046     02AC  12D9               	bcf	89,5	;volatile
   5047     02AD                     l957:	
-  5048                           ;main.c: 300:         do { TRISAbits.TRISA0 = 1; } while(0);
+  5048                           ;main.c: 302:         do { TRISAbits.TRISA0 = 1; } while(0);
   5049                           
   5050     02AD  0140               	movlb	0	; select bank0
   5051     02AE  1412               	bsf	18,0	;volatile
   5052     02AF                     l959:	
-  5053                           ;main.c: 301:         do { TRISBbits.TRISB4 = 0; } while(0);
+  5053                           ;main.c: 303:         do { TRISBbits.TRISB4 = 0; } while(0);
   5054                           
   5055     02AF  1213               	bcf	19,4	;volatile
   5056     02B0                     l961:	
-  5057                           ;main.c: 302:         do { TRISBbits.TRISB5 = 1; } while(0);
+  5057                           ;main.c: 304:         do { TRISBbits.TRISB5 = 1; } while(0);
   5058                           
   5059     02B0  1693               	bsf	19,5	;volatile
   5060     02B1                     l963:	
-  5061                           ;main.c: 303:         do { TRISCbits.TRISC6 = 0; } while(0);
+  5061                           ;main.c: 305:         do { TRISCbits.TRISC6 = 0; } while(0);
   5062                           
   5063     02B1  1314               	bcf	20,6	;volatile
   5064     02B2                     l965:	
-  5065                           ;main.c: 304:         do { TRISCbits.TRISC7 = 1; } while(0);
+  5065                           ;main.c: 306:         do { TRISCbits.TRISC7 = 1; } while(0);
   5066                           
   5067     02B2  1794               	bsf	20,7	;volatile
   5068     02B3                     l967:	
-  5069                           ;main.c: 305:         do { TRISDbits.TRISD0 = 0; } while(0);
+  5069                           ;main.c: 307:         do { TRISDbits.TRISD0 = 0; } while(0);
   5070                           
   5071     02B3  1015               	bcf	21,0	;volatile
   5072     02B4                     l969:	
-  5073                           ;main.c: 306:         do { TRISDbits.TRISD1 = 1; } while(0);
+  5073                           ;main.c: 308:         do { TRISDbits.TRISD1 = 1; } while(0);
   5074                           
   5075     02B4  1495               	bsf	21,1	;volatile
   5076     02B5                     l971:	
-  5077                           ;main.c: 307:         do { TRISDbits.TRISD5 = 1; } while(0);
+  5077                           ;main.c: 309:         do { TRISDbits.TRISD5 = 1; } while(0);
   5078                           
   5079     02B5  1695               	bsf	21,5	;volatile
   5080     02B6                     l3954:
   5081                           
-  5082                           ;main.c: 309:         SPI1_OpenSlave();
+  5082                           ;main.c: 311:         SPI1_OpenSlave();
   5083     02B6  318F  276C  3182   	fcall	_SPI1_OpenSlave
   5084                           
-  5085                           ;main.c: 311:         UART2_SendString("Mode: slave\n\r");
+  5085                           ;main.c: 313:         UART2_SendString("Mode: slave\n\r");
   5086     02B9  3068               	movlw	low (STR_5| (0+32768))
   5087     02BA  0140               	movlb	0	; select bank0
   5088     02BB  00A4               	movwf	UART2_SendString@str
@@ -5110,13 +5110,13 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5091     02BE  318F  27E7  3182   	fcall	_UART2_SendString
   5092     02C1                     l3956:
   5093                           
-  5094                           ;main.c: 314:         TRISBbits.TRISB5 = 1;
+  5094                           ;main.c: 316:         TRISBbits.TRISB5 = 1;
   5095     02C1  0140               	movlb	0	; select bank0
   5096     02C2  1693               	bsf	19,5	;volatile
   5097     02C3                     l3958:
   5098     02C3                     l3960:
   5099                           
-  5100                           ;main.c: 316:         UART2_SendString("enabling usart1\n\r");
+  5100                           ;main.c: 318:         UART2_SendString("enabling usart1\n\r");
   5101     02C3  3016               	movlw	low (STR_6| (0+32768))
   5102     02C4  00A4               	movwf	UART2_SendString@str
   5103     02C5  3090               	movlw	high (STR_6| (0+32768))
@@ -5124,19 +5124,19 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5105     02C7  318F  27E7  3182   	fcall	_UART2_SendString
   5106     02CA                     l3962:
   5107                           
-  5108                           ;main.c: 317:         EUSART1_Enable();
+  5108                           ;main.c: 319:         EUSART1_Enable();
   5109     02CA  318E  268C  3182   	fcall	_EUSART1_Enable
   5110     02CD                     l3964:
   5111                           
-  5112                           ;main.c: 318:         EUSART1_ReceiveEnable();
+  5112                           ;main.c: 320:         EUSART1_ReceiveEnable();
   5113     02CD  318E  268F  3182   	fcall	_EUSART1_ReceiveEnable
   5114     02D0                     l3966:
   5115                           
-  5116                           ;main.c: 319:         EUSART1_TransmitEnable();
+  5116                           ;main.c: 321:         EUSART1_TransmitEnable();
   5117     02D0  318E  2692  3182   	fcall	_EUSART1_TransmitEnable
   5118     02D3                     l3968:
   5119                           
-  5120                           ;main.c: 320:         UART2_SendString("registering handler\n\r");
+  5120                           ;main.c: 322:         UART2_SendString("registering handler\n\r");
   5121     02D3  3000               	movlw	low (STR_7| (0+32768))
   5122     02D4  0140               	movlb	0	; select bank0
   5123     02D5  00A4               	movwf	UART2_SendString@str
@@ -5145,7 +5145,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5126     02D8  318F  27E7  3182   	fcall	_UART2_SendString
   5127     02DB                     l3970:
   5128                           
-  5129                           ;main.c: 321:         EUSART1_RxCompleteCallbackRegister(&uart1_handler);
+  5129                           ;main.c: 323:         EUSART1_RxCompleteCallbackRegister(&uart1_handler);
   5130     02DB  3037               	movlw	low _uart1_handler
   5131     02DC  0140               	movlb	0	; select bank0
   5132     02DD  00A2               	movwf	EUSART1_RxCompleteCallbackRegister@callbackHandler
@@ -5154,15 +5154,15 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5135     02E0  318F  2721  3182   	fcall	_EUSART1_RxCompleteCallbackRegister
   5136     02E3                     l3972:
   5137                           
-  5138                           ;main.c: 324:         (INTCONbits.GIE = 1);
+  5138                           ;main.c: 326:         (INTCONbits.GIE = 1);
   5139     02E3  178B               	bsf	11,7	;volatile
   5140     02E4                     l3974:
   5141                           
-  5142                           ;main.c: 325:         (INTCONbits.PEIE = 1);
+  5142                           ;main.c: 327:         (INTCONbits.PEIE = 1);
   5143     02E4  170B               	bsf	11,6	;volatile
   5144     02E5                     l3976:
   5145                           
-  5146                           ;main.c: 328:         UART2_SendString("entering loop\n\r");
+  5146                           ;main.c: 330:         UART2_SendString("entering loop\n\r");
   5147     02E5  303A               	movlw	low (STR_8| (0+32768))
   5148     02E6  0140               	movlb	0	; select bank0
   5149     02E7  00A4               	movwf	UART2_SendString@str
@@ -5171,7 +5171,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5152     02EA  318F  27E7  3182   	fcall	_UART2_SendString
   5153     02ED                     l3978:
   5154                           
-  5155                           ;main.c: 329:         uint16_t data_temp;;main.c: 330:         uint16_t data_spi = 0x123
+  5155                           ;main.c: 331:         uint16_t data_temp;;main.c: 332:         uint16_t data_spi = 0x123
       +                          4;
   5156     02ED  3034               	movlw	52
   5157     02EE  0141               	movlb	1	; select bank1
@@ -5180,7 +5180,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5160     02F1  00E8               	movwf	(main@data_spi^(0+128)+1)
   5161     02F2                     l3980:
   5162                           
-  5163                           ;main.c: 333:             if (buffer_read(&dataBuffer, &data_temp)) {
+  5163                           ;main.c: 335:             if (buffer_read(&dataBuffer, &data_temp)) {
   5164     02F2  30D8               	movlw	low _dataBuffer
   5165     02F3  0140               	movlb	0	; select bank0
   5166     02F4  00A2               	movwf	buffer_read@buf
@@ -5198,7 +5198,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5178     0301                     u2930:
   5179     0301                     l3982:
   5180                           
-  5181                           ;main.c: 334:                 data_spi = data_temp;
+  5181                           ;main.c: 336:                 data_spi = data_temp;
   5182     0301  0141               	movlb	1	; select bank1
   5183     0302  0866               	movf	(main@data_temp+1)^(0+128),w
   5184     0303  00E8               	movwf	(main@data_spi+1)^(0+128)
@@ -5206,7 +5206,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5186     0305  00E7               	movwf	main@data_spi^(0+128)
   5187     0306                     l3984:
   5188                           
-  5189                           ;main.c: 335:                 printf("%x\r\n", data_spi);
+  5189                           ;main.c: 337:                 printf("%x\r\n", data_spi);
   5190     0306  308B               	movlw	low (STR_9| (0+32768))
   5191     0307  0140               	movlb	0	; select bank0
   5192     0308  00C9               	movwf	printf@fmt
@@ -5223,23 +5223,23 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5203     0313  318F  277C  3182   	fcall	_printf
   5204     0316                     l3986:
   5205                           
-  5206                           ;main.c: 339:    SSP1BUF = data_spi >> 8;
+  5206                           ;main.c: 341:    SSP1BUF = data_spi >> 8;
   5207     0316  0141               	movlb	1	; select bank1
   5208     0317  0868               	movf	(main@data_spi+1)^(0+128),w
   5209     0318  0143               	movlb	3	; select bank3
   5210     0319  008C               	movwf	12	;volatile
   5211     031A                     l3988:
   5212                           
-  5213                           ;main.c: 340:             data_ptr = 1;
+  5213                           ;main.c: 342:             data_ptr = 1;
   5214     031A  3001               	movlw	1
   5215     031B  0140               	movlb	0	; select bank0
   5216     031C  00E2               	movwf	_data_ptr
   5217                           
-  5218                           ;main.c: 341:             while (!PIR3bits.SSP1IF)
+  5218                           ;main.c: 343:             while (!PIR3bits.SSP1IF)
   5219     031D  2B29               	goto	l976
   5220     031E                     l977:
   5221                           
-  5222                           ;main.c: 342:             {;main.c: 344:                 if(!PORTDbits.RD5){
+  5222                           ;main.c: 344:             {;main.c: 346:                 if(!PORTDbits.RD5){
   5223     031E  0140               	movlb	0	; select bank0
   5224     031F  1A8F               	btfsc	15,5	;volatile
   5225     0320  2B22               	goto	u2941
@@ -5249,13 +5249,13 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5229     0323                     u2940:
   5230     0323                     l3990:
   5231     0323                     l3992:	
-  5232                           ;main.c: 346:                 } else {
+  5232                           ;main.c: 348:                 } else {
   5233                           
   5234     0323                     l3994:	
-  5235                           ;main.c: 351:                 if (detect_high_cs){
+  5235                           ;main.c: 353:                 if (detect_high_cs){
   5236                           
   5237                           
-  5238                           ;main.c: 352:                     if(PORTDbits.RD5){
+  5238                           ;main.c: 354:                     if(PORTDbits.RD5){
   5239     0323  1E8F               	btfss	15,5	;volatile
   5240     0324  2B26               	goto	u2951
   5241     0325  2B27               	goto	u2950
@@ -5264,16 +5264,16 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5244     0327                     u2950:
   5245     0327                     l3996:
   5246                           
-  5247                           ;main.c: 353:                         data_ptr = 0;
+  5247                           ;main.c: 355:                         data_ptr = 0;
   5248     0327  01E2               	clrf	_data_ptr
   5249                           
-  5250                           ;main.c: 354:                         break;
+  5250                           ;main.c: 356:                         break;
   5251     0328  2B2E               	goto	l3998
   5252     0329                     l976:	
-  5253                           ;main.c: 358:             }
+  5253                           ;main.c: 360:             }
   5254                           
   5255                           
-  5256                           ;main.c: 341:             while (!PIR3bits.SSP1IF)
+  5256                           ;main.c: 343:             while (!PIR3bits.SSP1IF)
   5257     0329  014E               	movlb	14	; select bank14
   5258     032A  1C0F               	btfss	15,0	;volatile
   5259     032B  2B2D               	goto	u2961
@@ -5283,7 +5283,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5263     032E                     u2960:
   5264     032E                     l3998:
   5265                           
-  5266                           ;main.c: 360:             if(data_ptr)
+  5266                           ;main.c: 362:             if(data_ptr)
   5267     032E  0140               	movlb	0	; select bank0
   5268     032F  0862               	movf	_data_ptr,w
   5269     0330  1903               	btfsc	3,2
@@ -5294,12 +5294,12 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5274     0334                     u2970:
   5275     0334                     l4000:
   5276                           
-  5277                           ;main.c: 361:             {;main.c: 362:                 PIR3bits.SSP1IF = 0;
+  5277                           ;main.c: 363:             {;main.c: 364:                 PIR3bits.SSP1IF = 0;
   5278     0334  014E               	movlb	14	; select bank14
   5279     0335  100F               	bcf	15,0	;volatile
   5280     0336                     l4002:
   5281                           
-  5282                           ;main.c: 363:                 SSP1BUF = data_spi & 0xFF;
+  5282                           ;main.c: 365:                 SSP1BUF = data_spi & 0xFF;
   5283     0336  0141               	movlb	1	; select bank1
   5284     0337  0867               	movf	main@data_spi^(0+128),w
   5285     0338  0143               	movlb	3	; select bank3
@@ -5307,7 +5307,7 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5287     033A  2B42               	goto	l984
   5288     033B                     l985:
   5289                           
-  5290                           ;main.c: 366:             {;main.c: 368:                 if(PORTDbits.RD5){
+  5290                           ;main.c: 368:             {;main.c: 370:                 if(PORTDbits.RD5){
   5291     033B  0140               	movlb	0	; select bank0
   5292     033C  1E8F               	btfss	15,5	;volatile
   5293     033D  2B3F               	goto	u2981
@@ -5317,16 +5317,16 @@ Microchip MPLAB XC8 C Compiler v2.50 (Free license) build 20240725155939 Og1
   5297     0340                     u2980:
   5298     0340                     l4004:
   5299                           
-  5300                           ;main.c: 369:                     data_ptr = 0;
+  5300                           ;main.c: 371:                     data_ptr = 0;
   5301     0340  01E2               	clrf	_data_ptr
   5302                           
-  5303                           ;main.c: 370:                     break;
+  5303                           ;main.c: 372:                     break;
   5304     0341  2AF2               	goto	l3980
   5305     0342                     l984:	
-  5306                           ;main.c: 372:             }
+  5306                           ;main.c: 374:             }
   5307                           
   5308                           
-  5309                           ;main.c: 365:             while (!PIR3bits.SSP1IF)
+  5309                           ;main.c: 367:             while (!PIR3bits.SSP1IF)
   5310     0342  014E               	movlb	14	; select bank14
   5311     0343  1C0F               	btfss	15,0	;volatile
   5312     0344  2B46               	goto	u2991
@@ -12323,7 +12323,7 @@ DATA                 0      0     194      0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.50 build 20240725155939 
-Symbol Table                                                                                   Thu Dec 12 16:27:50 2024
+Symbol Table                                                                                   Thu Dec 12 16:48:49 2024
 
                                 UART2_SendString@str 0024                                        ?_buffer_write 0070  
                                   _SPI1_ByteExchange 0000                             _eusart1TxBufferRemaining 0067  

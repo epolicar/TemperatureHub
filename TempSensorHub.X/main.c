@@ -249,6 +249,7 @@ void main(void) {
     if (STRAP_PIN) {
    
         /****** Master mode:*******/ 
+        //Master configuration
         PB_SetDigitalMode(); 
         SDO_SetDigitalMode();
         SCK_SetDigitalMode();
@@ -287,7 +288,8 @@ void main(void) {
             __delay_ms(50);  // Delay 1 second
         }
     } else {
-            //Slave configuration
+        /****** Master mode:*******/
+        //Slave configuration
         PB_SetDigitalMode(); 
         SDO_SetDigitalMode();
         SCK_SetDigitalMode();
