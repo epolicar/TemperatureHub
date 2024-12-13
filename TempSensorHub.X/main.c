@@ -39,7 +39,7 @@
 #define STRAP_PIN     PB_PORT // Pin = hi -> master 
 #define TIME_TO_READ  100           // time between reading sensor 
 #define TICK_THRESHOLD 10 // Define an appropriate threshold for ticks
-#define DEFAULT_TEMPERATURE 0x0019 // 25 degC
+#define DEFAULT_TEMPERATURE 0xC80 // 25 degC
 #define DEBUG
 
 volatile uint16_t tick_counter = 0; // Timer tick count 
@@ -103,7 +103,7 @@ uint16_t read_temperature(void) {
 void Error_Handler(char *message) {
     // Handle error
     printf("Error: %s\n", message);
-    while (1);
+    //while (1);
 }
 
 
@@ -286,6 +286,7 @@ void main(void) {
 #ifdef DEBUG
             temperature = temperature >> 7;
             printf("Temperature: %u\n\r", temperature);  // Debugging output
+            
             __delay_ms(TIME_TO_READ);  // Delay in milliseconds, default = 100 mS
 #endif
             __delay_ms(10);  // Delay 1 second
@@ -312,16 +313,21 @@ void main(void) {
         INTERRUPT_PeripheralInterruptEnable();        
         
         UART2_SendString("entering loop\n\r");
-        uint16_t data_temp;
-        uint16_t data_spi = 0x1234;
+        bool need_to_send_data = true;
+        uint16_t data_spi = DEFAULT_TEMPERATURE;
+        uint16_t data_temp = data_spi;
         while (1) {
             start_label:
             if (buffer_read(&dataBuffer, &data_temp)) {
                 data_spi = data_temp;
                 printf("%x\r\n", data_spi);
-            } 
-
-			SSP1BUF = data_spi >> 8; //send the high-byte
+                SSP1BUF = data_spi >> 8; //send the high-byte
+            } else { //no new data
+                if( need_to_send_data){
+                    SSP1BUF = data_spi >> 8; //send the high-bytes
+                    need_to_send_data = false;
+                }
+            }
             data_ptr = 1;
             while (!PIR3bits.SSP1IF)
             {
@@ -341,10 +347,10 @@ void main(void) {
                 }
                 // Wait for flag to get set */
             }
-            
+            PIR3bits.SSP1IF = 0;
+            need_to_send_data = true;
             if(data_ptr)
             {
-                PIR3bits.SSP1IF = 0;       //clear flag to get ready for the next transmission     
                 SSP1BUF = data_spi & 0xFF; //send the low-byte
             }
             while (!PIR3bits.SSP1IF)
@@ -355,6 +361,7 @@ void main(void) {
                     break;
                 }
             }
+            PIR3bits.SSP1IF = 0;
         }
     }
 }
