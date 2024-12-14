@@ -13,7 +13,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -250,13 +250,18 @@ void main(void) {
         //Master configuration /*
         TRISB = 0xD7;
         SSP1DATPPS = 0xC; //RB4->MSSP1:SDI1;
-        RX1DTPPS = 0x17; //RC7->EUSART1:RX1;
+        //RX1DTPPS = 0x17; //RC7->EUSART1:RX1;
         RX2DTPPS = 0x19; //RD1->EUSART2:RX2;
         RB3PPS = 0x16;  //RB3->MSSP1:SDO1;
         RC6PPS = 0x0F;  //RC6->EUSART1:TX1;
         RD0PPS = 0x11;  //RD0->EUSART2:TX2;
         SSP1CLKPPS = 0xD;  //RB5->MSSP1:SCK1;
         RB5PPS = 0x15;  //RB5->MSSP1:SCK1;
+        RC7PPS = 0x0F;  //RC7->EUSART1:TX1;
+
+        RX1DTPPS = 0x16; //RC6->EUSART1:RX1;
+        RC7PPS = 0x0F; //RC7->EUSART1:TX1;
+        TRISC = 0x7F;
 
        //set cs as  output
         TRISDbits.TRISD5 = 0;  // Set D5 as output
