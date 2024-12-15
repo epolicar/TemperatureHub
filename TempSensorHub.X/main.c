@@ -13,7 +13,7 @@
 */
 
 /*
-© [2024] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -39,7 +39,7 @@
 #define STRAP_PIN     PB_PORT // Pin = hi -> master 
 #define TIME_TO_READ  100           // time between reading sensor 
 #define TICK_THRESHOLD 10 // Define an appropriate threshold for ticks
-#define DEFAULT_TEMPERATURE 0x0019 // 25 degC
+#define DEFAULT_TEMPERATURE 0xC80 // 25 degC
 #define DEBUG
 
 volatile uint16_t tick_counter = 0; // Timer tick count 
@@ -103,7 +103,7 @@ uint16_t read_temperature(void) {
 void Error_Handler(char *message) {
     // Handle error
     printf("Error: %s\n", message);
-    while (1);
+    //while (1);
 }
 
 
@@ -250,13 +250,18 @@ void main(void) {
         //Master configuration /*
         TRISB = 0xD7;
         SSP1DATPPS = 0xC; //RB4->MSSP1:SDI1;
-        RX1DTPPS = 0x17; //RC7->EUSART1:RX1;
+        //RX1DTPPS = 0x17; //RC7->EUSART1:RX1;
         RX2DTPPS = 0x19; //RD1->EUSART2:RX2;
         RB3PPS = 0x16;  //RB3->MSSP1:SDO1;
         RC6PPS = 0x0F;  //RC6->EUSART1:TX1;
         RD0PPS = 0x11;  //RD0->EUSART2:TX2;
         SSP1CLKPPS = 0xD;  //RB5->MSSP1:SCK1;
         RB5PPS = 0x15;  //RB5->MSSP1:SCK1;
+        RC7PPS = 0x0F;  //RC7->EUSART1:TX1;
+
+        RX1DTPPS = 0x16; //RC6->EUSART1:RX1;
+        RC7PPS = 0x0F; //RC7->EUSART1:TX1;
+        TRISC = 0x7F;
 
        //set cs as  output
         TRISDbits.TRISD5 = 0;  // Set D5 as output
@@ -286,6 +291,7 @@ void main(void) {
 #ifdef DEBUG
             temperature = temperature >> 7;
             printf("Temperature: %u\n\r", temperature);  // Debugging output
+            
             __delay_ms(TIME_TO_READ);  // Delay in milliseconds, default = 100 mS
 #endif
             __delay_ms(10);  // Delay 1 second
@@ -312,16 +318,21 @@ void main(void) {
         INTERRUPT_PeripheralInterruptEnable();        
         
         UART2_SendString("entering loop\n\r");
-        uint16_t data_temp;
-        uint16_t data_spi = 0x1234;
+        bool need_to_send_data = true;
+        uint16_t data_spi = DEFAULT_TEMPERATURE;
+        uint16_t data_temp = data_spi;
         while (1) {
             start_label:
             if (buffer_read(&dataBuffer, &data_temp)) {
                 data_spi = data_temp;
                 printf("%x\r\n", data_spi);
-            } 
-
-			SSP1BUF = data_spi >> 8; //send the high-byte
+                SSP1BUF = data_spi >> 8; //send the high-byte
+            } else { //no new data
+                if( need_to_send_data){
+                    SSP1BUF = data_spi >> 8; //send the high-bytes
+                    need_to_send_data = false;
+                }
+            }
             data_ptr = 1;
             while (!PIR3bits.SSP1IF)
             {
@@ -341,10 +352,10 @@ void main(void) {
                 }
                 // Wait for flag to get set */
             }
-            
+            PIR3bits.SSP1IF = 0;
+            need_to_send_data = true;
             if(data_ptr)
             {
-                PIR3bits.SSP1IF = 0;       //clear flag to get ready for the next transmission     
                 SSP1BUF = data_spi & 0xFF; //send the low-byte
             }
             while (!PIR3bits.SSP1IF)
@@ -355,6 +366,7 @@ void main(void) {
                     break;
                 }
             }
+            PIR3bits.SSP1IF = 0;
         }
     }
 }
